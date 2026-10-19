@@ -1,0 +1,17 @@
+name: Test Discord connection
+
+on:
+  workflow_dispatch: {}
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install
+        run: pip install --quiet requests
+      - name: Post a hello message to every channel
+        env:
+          DISCORD_WEBHOOKS: ${{ secrets.DISCORD_WEBHOOKS }}
+        run: python -m bot test
