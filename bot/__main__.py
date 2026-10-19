@@ -1,4 +1,4 @@
-"""NJIT Gameday bot.
+"""NJIT Game Day bot.
 
   python -m bot refresh        re-read every NJIT schedule (once a day)
   python -m bot alerts         send any alerts that are due right now
@@ -71,8 +71,8 @@ def cmd_test():
         if not sport:
             print(f"  ! '{key}' is not a known sport key (see bot/sports.py)")
             continue
-        alerts.post(url, {"username": "NJIT Gameday", "allowed_mentions": {"parse": []},
-                          "content": f"{sport['emoji']} NJIT Gameday bot is connected to **{sport['name']}**! "
+        alerts.post(url, {"username": "NJIT Game Day", "allowed_mentions": {"parse": []},
+                          "content": f"{sport['emoji']} NJIT Game Day bot is connected to **{sport['name']}**! "
                                      "Game-day alerts will show up here. 🔴⚪"})
         print(f"  ✓ {key}")
     missing = [k for k in SPORTS if k not in hooks]

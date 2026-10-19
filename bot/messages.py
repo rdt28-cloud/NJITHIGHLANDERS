@@ -259,7 +259,7 @@ def build(kind: str, game: dict, sport: dict, state: dict, minutes_to_start=None
         else:
             payload["content"] += "\n" + extra
     payload["allowed_mentions"] = {"parse": []}  # never ping @everyone by accident
-    payload["username"] = "NJIT Gameday"
+    payload["username"] = "NJIT Game Day"
     return payload
 
 

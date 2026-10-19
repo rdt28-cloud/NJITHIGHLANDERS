@@ -1,4 +1,4 @@
-# NJIT Gameday Bot 🔴⚪
+# NJIT Game Day Bot 🔴⚪
 
 Automatic game-day alerts for the **NJIT Athletics Updates** Discord. It reads every
 NJIT Highlanders schedule from njithighlanders.com each morning and posts to each
@@ -24,7 +24,7 @@ sport's own channel:
 For **each** sport channel (⚾-mens-baseball, 🏀-mens-basketball, …):
 
 1. Hover the channel → ⚙️ **Edit Channel** → **Integrations** → **Webhooks** → **New Webhook**.
-2. Name it **NJIT Gameday**. Optionally upload the NJIT logo as its picture.
+2. Name it **NJIT Game Day**. Optionally upload the NJIT logo as its picture.
 3. Click **Copy Webhook URL** and paste it into the template below.
 
 > Webhook URLs work like passwords: anyone with one can post in that channel.
