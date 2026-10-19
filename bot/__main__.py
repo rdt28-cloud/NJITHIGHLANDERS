@@ -92,7 +92,7 @@ def cmd_preview(days=14):
     t = now
     while t < end:
         for kind, g, mins in list(alerts.due_alerts(games, t, state.setdefault("sent", {}))):
-            payloads = [(kind, messages.build(kind, g, SPORTS[g["sport"]], state, minutes_to_start=mins))]
+            payloads = [(kind, messages.build(kind, g, SPORTS[g["sport"]], state, minutes_to_start=mins, ping=alerts.PING_ROLES))]
             if kind == "home_morning" and alerts.POLLS:
                 payloads.append(("home_poll", messages.build_poll(g, SPORTS[g["sport"]], state, now=t)))
             state["sent"][f"{g['uid']}|{kind}"] = t.isoformat()

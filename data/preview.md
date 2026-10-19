@@ -2,14 +2,13 @@
 
 ### Thu Oct 22, 09:00 AM · #womens-soccer · away_morning
 
-> @Women's Soccer Fans ⚽⚽⚽
+> ⚽⚽⚽
 > # GAME DAY
 > **Women's Soccer** · NJIT at Binghamton
 > -# 4 PM ET · Vestal, NY · live updates on the game page
 
 ### Thu Oct 22, 03:45 PM · #womens-soccer · away_live
 
-> @Women's Soccer Fans
 > [embed] ⚽ Almost go time!
 > **NJIT at Binghamton**
 > Kickoff in 15 minutes · Vestal, NY
@@ -18,7 +17,7 @@
 
 ### Fri Oct 23, 09:00 AM · #womens-volleyball · away_morning
 
-> @Women's Volleyball Fans 🏐 **GAME DAY!** 🏐
+> 🏐 **GAME DAY!** 🏐
 > Women's Volleyball: **NJIT at UAlbany**
 > 🕒 6 PM ET · 📍 Albany, NY
 > 📺 Watch on America East Live: https://americaeast.com/watch/default.aspx?Live=18314&path=conf
@@ -26,7 +25,6 @@
 
 ### Fri Oct 23, 09:00 AM · #mens-tennis · away_morning
 
-> @Men's Tennis Fans
 > [embed] 🎾 It's Men's Tennis game day!
 > The Highlanders hit the road today: **the Big South Individual Championships**.
 >   🕒 Start: time TBA
@@ -36,7 +34,7 @@
 
 ### Fri Oct 23, 09:00 AM · #womens-tennis · away_morning
 
-> @Women's Tennis Fans 🎾 **GAME DAY!** 🎾
+> 🎾 **GAME DAY!** 🎾
 > Women's Tennis: **The Big South Individuals**
 > 🕒 time TBA · 📍 Rock Hill, SC
 > 📲 Game info & live updates: https://njithighlanders.com/sports/womens-tennis/schedule
@@ -44,14 +42,13 @@
 
 ### Fri Oct 23, 05:45 PM · #womens-volleyball · away_live
 
-> @Women's Volleyball Fans 📺 Highlanders, tune in! 🏐
+> 📺 Highlanders, tune in! 🏐
 > **NJIT at UAlbany** goes live on America East Live in 15 minutes.
 > <https://americaeast.com/watch/default.aspx?Live=18314&path=conf>
 > Go Highlanders! 🔴⚪
 
 ### Sat Oct 24, 09:00 AM · #mens-soccer · away_morning
 
-> @Men's Soccer Fans
 > [embed] ⚽ It's Men's Soccer game day!
 > The Highlanders hit the road today: **NJIT at UMass Lowell**.
 >   🕒 Start: 6 PM ET
@@ -70,7 +67,7 @@
 
 ### Sat Oct 24, 09:00 AM · #fencing · away_morning
 
-> @Fencing Fans 🚌 **ROAD TRIP** 🚌
+> 🚌 **ROAD TRIP** 🚌
 > 🤺 Fencing heads to Philadelphia, PA today.
 > 
 > **The Nikki Franke Open** · time TBA
@@ -78,7 +75,7 @@
 
 ### Sat Oct 24, 05:45 PM · #mens-soccer · away_live
 
-> @Men's Soccer Fans ⏰ **15 MIN TO GO!** ⚽
+> ⏰ **15 MIN TO GO!** ⚽
 > Men's Soccer: **NJIT at UMass Lowell** starts in 15 minutes in Lowell, MA.
 > 📲 Game info & live updates: https://njithighlanders.com/sports/mens-soccer/schedule
 > Red and white all day! 🔴⚪
@@ -91,7 +88,7 @@
 
 ### Sun Oct 25, 09:00 AM · #womens-soccer · home_morning
 
-> @Women's Soccer Fans 🏟️ **WE'RE HOSTING TODAY!** 🏟️
+> 🏟️ **WE'RE HOSTING TODAY!** 🏟️
 > ⚽ Women's Soccer: **NJIT vs UMass Lowell**
 > 🕒 1 PM ET · 📍 Lubetkin Field at Mal Simon Stadium
 > Pack the stands, Highlanders! 🔴⚪
@@ -124,7 +121,7 @@
 
 ### Sun Oct 25, 12:15 PM · #womens-soccer · home_pullup
 
-> @Women's Soccer Fans 📣 **PULL UP, HIGHLANDERS!** 📣
+> 📣 **PULL UP, HIGHLANDERS!** 📣
 > ⚽ NJIT vs UMass Lowell: kickoff in 45 minutes at Lubetkin Field at Mal Simon Stadium.
 > Let's fill those stands! 🏟️🔴
 
@@ -137,7 +134,7 @@
 
 ### Fri Oct 30, 09:00 AM · #womens-cross-country · away_morning
 
-> @Women's Cross Country Fans 🏃 **GAME DAY!** 🏃
+> 🏃 **GAME DAY!** 🏃
 > Women's Cross Country: **The America East Conference Championships**
 > 🕒 10 AM ET · 📍 Albany, NY
 > 📲 Game info & live updates: https://njithighlanders.com/sports/womens-cross-country/schedule
@@ -145,7 +142,7 @@
 
 ### Fri Oct 30, 09:00 AM · #mens-cross-country · away_morning
 
-> @Men's Cross Country Fans 🏃 **GAME DAY!** 🏃
+> 🏃 **GAME DAY!** 🏃
 > Men's Cross Country: **The America East Conference Championships**
 > 🕒 11 AM ET · 📍 Albany, NY
 > 📲 Game info & live updates: https://njithighlanders.com/sports/mens-cross-country/schedule
@@ -153,7 +150,7 @@
 
 ### Fri Oct 30, 09:00 AM · #womens-volleyball · home_morning
 
-> @Women's Volleyball Fans ☀️ Good morning, NJIT!
+> ☀️ Good morning, NJIT!
 > Home match today 🏐
 > > **NJIT vs Bryant**
 > > 2 PM ET at Joel & Diane Bloom Wellness and Events Center (WEC)
@@ -169,7 +166,7 @@
 
 ### Fri Oct 30, 09:00 AM · #mens-soccer · home_morning
 
-> @Men's Soccer Fans Today's plans? Sorted ✅
+> Today's plans? Sorted ✅
 > • **What:** Men's Soccer, NJIT vs Bryant
 > • **When:** 6 PM ET
 > • **Where:** Lubetkin Field at Mal Simon Stadium
@@ -187,26 +184,25 @@
 
 ### Fri Oct 30, 09:45 AM · #womens-cross-country · away_live
 
-> @Women's Cross Country Fans ⏰ **15 MIN TO GO!** 🏃
+> ⏰ **15 MIN TO GO!** 🏃
 > Women's Cross Country: **the America East Conference Championships** starts in 15 minutes in Albany, NY.
 > 📲 Game info & live updates: https://njithighlanders.com/sports/womens-cross-country/schedule
 > Red and white all day! 🔴⚪
 
 ### Fri Oct 30, 10:45 AM · #mens-cross-country · away_live
 
-> @Men's Cross Country Fans 🔔 Heads up, Highlanders!
+> 🔔 Heads up, Highlanders!
 > 🏃 Men's Cross Country the gun in 15 minutes. Send the squad some good vibes 🙌
 > <https://njithighlanders.com/sports/mens-cross-country/schedule>
 
 ### Fri Oct 30, 01:15 PM · #womens-volleyball · home_pullup
 
-> @Women's Volleyball Fans ⏰ **45 MIN UNTIL FIRST SERVE** ⏰
+> ⏰ **45 MIN UNTIL FIRST SERVE** ⏰
 > 🏐 NJIT vs Bryant at Joel & Diane Bloom Wellness and Events Center (WEC)
 > Drop what you're doing and come support the squad! 🙌
 
 ### Fri Oct 30, 05:15 PM · #mens-soccer · home_pullup
 
-> @Men's Soccer Fans
 > [embed] 🏃‍♂️ Get to Lubetkin Field at Mal Simon Stadium!
 > ⚽ **Men's Soccer** kickoff in 45 minutes.
 > The best seats go fast. Grab yours and bring the noise. 🔊
@@ -218,7 +214,7 @@
 
 ### Sat Oct 31, 09:00 AM · #mens-swimming-diving · away_morning
 
-> @Men's Swimming & Diving Fans 🚌 **ROAD TRIP** 🚌
+> 🚌 **ROAD TRIP** 🚌
 > 🏊 Men's Swimming & Diving heads to New York, NY today.
 > 
 > **NJIT at Fordham** · 1 PM ET
@@ -234,7 +230,7 @@
 
 ### Sat Oct 31, 12:45 PM · #mens-swimming-diving · away_live
 
-> @Men's Swimming & Diving Fans ⏰ **15 MIN TO GO!** 🏊
+> ⏰ **15 MIN TO GO!** 🏊
 > Men's Swimming & Diving: **NJIT at Fordham** starts in 15 minutes in New York, NY.
 > 📲 Game info & live updates: https://njithighlanders.com/sports/mens-swimming-and-diving/schedule
 > Red and white all day! 🔴⚪
@@ -248,7 +244,7 @@
 
 ### Sun Nov 01, 09:00 AM · #womens-volleyball · home_morning
 
-> @Women's Volleyball Fans 🏟️ **WE'RE HOSTING TODAY!** 🏟️
+> 🏟️ **WE'RE HOSTING TODAY!** 🏟️
 > 🏐 Women's Volleyball: **NJIT vs New Hampshire**
 > 🕒 1 PM ET · 📍 Joel & Diane Bloom Wellness and Events Center (WEC)
 > Pack the stands, Highlanders! 🔴⚪
@@ -273,7 +269,7 @@
 
 ### Sun Nov 01, 09:00 AM · #fencing · home_morning
 
-> @Fencing Fans Today's plans? Sorted ✅
+> Today's plans? Sorted ✅
 > • **What:** Fencing, the NJIT Invitational
 > • **When:** time TBA
 > • **Where:** Joel & Diane Bloom Wellness and Events Center (WEC)
@@ -289,7 +285,6 @@
 
 ### Sun Nov 01, 12:15 PM · #womens-volleyball · home_pullup
 
-> @Women's Volleyball Fans
 > [embed] 🔥 It's almost time, Newark!
 > 🏐 NJIT vs New Hampshire
 > 📍 **Joel & Diane Bloom Wellness and Events Center (WEC)**
@@ -305,7 +300,7 @@
 
 ### Mon Nov 02, 09:00 AM · #womens-basketball · home_morning
 
-> @Women's Basketball Fans 🏀🏀🏀
+> 🏀🏀🏀
 > # HOME GAME TODAY
 > **NJIT vs Rider**
 > -# 6 PM ET · Joel & Diane Bloom Wellness and Events Center (WEC) · wear red!
@@ -320,7 +315,7 @@
 
 ### Mon Nov 02, 09:00 AM · #mens-basketball · away_morning
 
-> @Men's Basketball Fans 🚌 **ROAD TRIP** 🚌
+> 🚌 **ROAD TRIP** 🚌
 > 🏀 Men's Basketball heads to Dayton, OH today.
 > 
 > **NJIT at Dayton** · 7 PM ET
@@ -328,12 +323,12 @@
 
 ### Mon Nov 02, 05:15 PM · #womens-basketball · home_pullup
 
-> @Women's Basketball Fans ⏰ **45 MIN UNTIL TIP-OFF** ⏰
+> ⏰ **45 MIN UNTIL TIP-OFF** ⏰
 > 🏀 NJIT vs Rider at Joel & Diane Bloom Wellness and Events Center (WEC)
 > Drop what you're doing and come support the squad! 🙌
 
 ### Mon Nov 02, 06:45 PM · #mens-basketball · away_live
 
-> @Men's Basketball Fans 3… 2… 1… 🏀
+> 3… 2… 1… 🏀
 > NJIT Men's Basketball is about to get going (in 15 minutes) at Dayton, OH!
 > Check the game page for any stream or live stats: https://njithighlanders.com/sports/mens-basketball/schedule
