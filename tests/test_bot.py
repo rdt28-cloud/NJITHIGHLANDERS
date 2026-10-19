@@ -83,7 +83,7 @@ def test_messages_rotate_and_never_repeat_back_to_back():
     for _ in range(40):
         p = messages.build("home_pullup", g, SPORTS["mens-soccer"], state, minutes_to_start=45, rng=rng)
         seen.append(messages.plain_text(p))
-        assert p["allowed_mentions"] == {"parse": []}
+        assert p["allowed_mentions"]["parse"] == []  # never @everyone/@here
         assert "Senior Night" in seen[-1]
     assert all(a != b for a, b in zip(seen, seen[1:]))
     assert len(set(seen)) >= 6  # many different formats in play
@@ -107,6 +107,41 @@ def test_stale_old_season_is_skipped():
     out = normalize(raw, "fencing", TODAY)
     assert [g["opponent"] for g in out] == ["Nikki Franke Open"]
     assert out[0]["date"] == "2026-10-24" and out[0]["start"] is None
+
+
+def test_alerts_ping_only_that_sports_fans():
+    g = [x for x in games() if x["opponent"] == "UMBC"][0]
+    sport = SPORTS["mens-soccer"]
+    for i in range(12):
+        p = messages.build("away_morning", g, sport, {}, rng=random.Random(i))
+        assert p["content"].startswith(f"<@&{sport['role_id']}>")
+        assert p["allowed_mentions"] == {"parse": [], "roles": [sport["role_id"]]}  # no @everyone, ever
+
+
+def test_home_poll_is_valid_discord_poll():
+    from datetime import datetime
+    for g in games():
+        state = {}
+        for i in range(8):
+            p = messages.build_poll(g, SPORTS["mens-soccer"], state,
+                                    now=datetime(2026, 10, 30, 9, 0, tzinfo=ET), rng=random.Random(i))["poll"]
+            assert 0 < len(p["question"]["text"]) <= 300
+            assert 2 <= len(p["answers"]) <= 10
+            assert all(0 < len(a["poll_media"]["text"]) <= 55 for a in p["answers"])
+            assert 1 <= p["duration"] <= 24
+    bryant = [x for x in games() if x["opponent"] == "Bryant"][0]
+    p = messages.build_poll(bryant, SPORTS["mens-soccer"], {}, now=datetime(2026, 10, 30, 9, 0, tzinfo=ET))
+    assert p["poll"]["duration"] == 12  # 6 PM start + 3h → open until ~9 PM
+
+
+def test_home_morning_posts_alert_then_poll():
+    from datetime import datetime
+    bryant = [x for x in games() if x["opponent"] == "Bryant"]
+    sent_payloads = []
+    alerts.post = lambda url, payload: sent_payloads.append(payload)
+    alerts.time.sleep = lambda s: None
+    alerts.run(bryant, {}, now=datetime(2026, 10, 30, 9, 0, tzinfo=ET), webhooks={"mens-soccer": "https://x"}, log=lambda *a: None)
+    assert len(sent_payloads) == 2 and "poll" not in sent_payloads[0] and "poll" in sent_payloads[1]
 
 
 def test_every_template_renders_for_every_kind():

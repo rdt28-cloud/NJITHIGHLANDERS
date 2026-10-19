@@ -23,6 +23,7 @@ MORNING_HOUR = 9
 AWAY_LEAD_MIN = 15
 HOME_LEAD_MIN = 45
 GRACE_MIN = 15  # GitHub's scheduler can run a few minutes late; still send within this grace
+POLLS = True    # post a fan prediction poll after each home-game morning alert
 
 
 def due_alerts(games, now, sent):
@@ -84,17 +85,25 @@ def run(games, state, now=None, webhooks=None, dry_run=False, log=print):
         sport = SPORTS.get(g["sport"])
         if not sport:
             continue
-        payload = messages.build(kind, g, sport, state, minutes_to_start=mins)
+        payloads = [(kind, messages.build(kind, g, sport, state, minutes_to_start=mins))]
+        if kind == "home_morning" and POLLS:
+            payloads.append(("home_poll", messages.build_poll(g, sport, state, now=now)))
         url = webhooks.get(g["sport"])
-        label = f"{kind:13s} {g['sport']:22s} {g['opponent']}"
-        if dry_run or not url:
-            log(f"[{'dry-run' if dry_run else 'no webhook'}] {label}")
-            if dry_run:
-                log("    " + messages.plain_text(payload).replace("\n", "\n    "))
-        else:
-            post(url, payload)
-            log(f"[sent] {label}")
-            time.sleep(1)
+        for k, payload in payloads:
+            label = f"{k:13s} {g['sport']:22s} {g['opponent']}"
+            if dry_run or not url:
+                log(f"[{'dry-run' if dry_run else 'no webhook'}] {label}")
+                if dry_run:
+                    log("    " + messages.plain_text(payload).replace("\n", "\n    "))
+            else:
+                try:
+                    post(url, payload)
+                    log(f"[sent] {label}")
+                except Exception as e:  # a failed poll must never block the alert itself
+                    if k != "home_poll":
+                        raise
+                    log(f"[poll skipped] {label}: {e}")
+                time.sleep(1)
         if not dry_run:
             sent[f"{g['uid']}|{kind}"] = now.isoformat()
         count += 1

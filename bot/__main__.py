@@ -92,10 +92,15 @@ def cmd_preview(days=14):
     t = now
     while t < end:
         for kind, g, mins in list(alerts.due_alerts(games, t, state.setdefault("sent", {}))):
-            payload = messages.build(kind, g, SPORTS[g["sport"]], state, minutes_to_start=mins)
+            payloads = [(kind, messages.build(kind, g, SPORTS[g["sport"]], state, minutes_to_start=mins))]
+            if kind == "home_morning" and alerts.POLLS:
+                payloads.append(("home_poll", messages.build_poll(g, SPORTS[g["sport"]], state, now=t)))
             state["sent"][f"{g['uid']}|{kind}"] = t.isoformat()
-            out.append(f"### {t.strftime('%a %b %d, %I:%M %p')} · #{g['sport']} · {kind}\n\n"
-                       + "\n".join("> " + line for line in messages.plain_text(payload).splitlines()) + "\n")
+            for k, payload in payloads:
+                text = messages.plain_text(payload)
+                text = text.replace(f"<@&{SPORTS[g['sport']].get('role_id')}>", f"@{SPORTS[g['sport']]['name']} Fans")
+                out.append(f"### {t.strftime('%a %b %d, %I:%M %p')} · #{g['sport']} · {k}\n\n"
+                           + "\n".join("> " + line for line in text.splitlines()) + "\n")
         t += timedelta(minutes=5)
     _save_md = DATA / "preview.md"
     _save_md.write_text(f"# Upcoming alerts, next {days} days ({len(out)} alerts)\n\n" + "\n".join(out))

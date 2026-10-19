@@ -232,7 +232,7 @@ TEMPLATES = {
 }
 
 
-def build(kind: str, game: dict, sport: dict, state: dict, minutes_to_start=None, rng=random):
+def build(kind: str, game: dict, sport: dict, state: dict, minutes_to_start=None, rng=random, ping=True):
     """Return a Discord webhook payload for an alert, rotating formats.
 
     `state["recent"]` remembers which templates were used lately per
@@ -259,8 +259,71 @@ def build(kind: str, game: dict, sport: dict, state: dict, minutes_to_start=None
         else:
             payload["content"] += "\n" + extra
     payload["allowed_mentions"] = {"parse": []}  # never ping @everyone by accident
+    role = sport.get("role_id")
+    if role and ping:
+        # ping only this sport's fans (people who picked the "<Sport> Fans" role)
+        mention = f"<@&{role}>"
+        payload["content"] = (mention + " " + payload["content"]) if payload.get("content") else mention
+        payload["allowed_mentions"] = {"parse": [], "roles": [role]}
     payload["username"] = "NJIT Game Day"
     return payload
+
+
+# ------------------------------------------- HOME: morning prediction poll
+
+def _poll_options(c, opp):
+    """Each entry: (question, [answers]). Answers ≤ 55 chars (Discord limit)."""
+    if c["is_event"]:
+        return [
+            (f"{c['e']} How will NJIT do at {c['matchup']} today?",
+             ["🥇 Podium finishes!", "📈 Big personal bests", "💪 Solid team showing", "🔥 Best result of the season"]),
+            (f"{c['e']} Are you coming out to support NJIT {c['sport']} today?",
+             ["🙋 I'll be there!", "📲 Following along online", "🔜 Next time!"]),
+            (f"{c['e']} Hype check for today's {c['noun']}: how confident are you?",
+             ["🔥🔥🔥 Max hype", "🔥🔥 Feeling good", "🔥 Cautiously optimistic"]),
+        ]
+    o = opp[:28]
+    return [
+        (f"{c['e']} {c['matchup']}: who takes it today?",
+         ["🔴 NJIT in a blowout", "🔴 NJIT in a close one", f"⚪ {o} steals one"]),
+        (f"{c['e']} Are you pulling up to {c['matchup']} today?",
+         ["🙋 I'll be in the stands!", "👯 Bringing friends", "📺 Watching from home", "🔜 Next time!"]),
+        (f"{c['e']} Predict it: how does NJIT win vs {o}?",
+         ["🛡️ Lockdown defense", "⚡ Explosive offense", "🧠 Clutch at the end", "🔥 Dominant start to finish"]),
+        (f"{c['e']} Hype meter for {c['matchup']}?",
+         ["🔥🔥🔥 Max hype", "🔥🔥 Feeling good", "🔥 Nervous but believing"]),
+        (f"{c['e']} Who's the X-factor for NJIT {c['sport']} today?",
+         ["🌟 Our stars", "🪑 The bench", "📣 The home crowd", "🧑‍🏫 The coaching staff"]),
+    ]
+
+
+def build_poll(game: dict, sport: dict, state: dict, now=None, rng=random):
+    """A Discord poll posted right after the home-game morning alert."""
+    from datetime import datetime as _dt
+    ctx = _ctx(game, sport)
+    options = _poll_options(ctx, game["opponent"])
+    key = f"{game['sport']}:home_poll"
+    recent = state.setdefault("recent", {}).setdefault(key, [])
+    avoid = recent[-min(len(options) - 1, 3):] if recent else []
+    idx = rng.choice([i for i in range(len(options)) if i not in avoid] or list(range(len(options))))
+    recent.append(idx)
+    del recent[:-6]
+    question, answers = options[idx]
+    # keep the poll open until about 3 hours after the start (or 12h if time TBA)
+    hours = 12
+    if game.get("start") and now is not None:
+        left = (_dt.fromisoformat(game["start"]) - now).total_seconds() / 3600 + 3
+        hours = max(1, min(24, int(left + 0.999)))
+    return {
+        "username": "NJIT Game Day",
+        "allowed_mentions": {"parse": []},
+        "poll": {
+            "question": {"text": question[:300]},
+            "answers": [{"poll_media": {"text": a[:55]}} for a in answers],
+            "duration": hours,
+            "allow_multiselect": False,
+        },
+    }
 
 
 def plain_text(payload: dict) -> str:
@@ -268,6 +331,10 @@ def plain_text(payload: dict) -> str:
     parts = []
     if payload.get("content"):
         parts.append(payload["content"])
+    if payload.get("poll"):
+        p = payload["poll"]
+        parts.append(f"[poll, {p['duration']}h] {p['question']['text']}")
+        parts.extend("  ◻ " + a["poll_media"]["text"] for a in p["answers"])
     for e in payload.get("embeds", []):
         parts.append(f"[embed] {e.get('title', '')}")
         if e.get("description"):
