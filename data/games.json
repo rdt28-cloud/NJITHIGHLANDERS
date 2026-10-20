@@ -1,26 +1,6 @@
 {
-  "updated": "2026-10-19T16:48:55-04:00",
-  "source": "initial load from njithighlanders.com",
+  "updated": "2026-10-20T06:39:19-04:00",
   "games": [
-    {
-      "uid": "mens-swimming-diving:11686",
-      "sport": "mens-swimming-diving",
-      "opponent": "Fall Alumni Meet",
-      "where": "home",
-      "date": "2026-10-17",
-      "start": "2026-10-17T12:00:00-04:00",
-      "time_text": "12pm",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule"
-    },
     {
       "uid": "mens-basketball:11546",
       "sport": "mens-basketball",
@@ -39,6 +19,43 @@
         "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-basketball/schedule"
+    },
+    {
+      "uid": "womens-soccer:11458",
+      "sport": "womens-soccer",
+      "opponent": "Vermont",
+      "where": "home",
+      "date": "2026-10-18",
+      "start": "2026-10-18T14:00:00-04:00",
+      "time_text": "2pm",
+      "location": "Newark, NJ Lubetkin Field at Mal Simon Stadium",
+      "venue": "Lubetkin Field at Mal Simon Stadium",
+      "tournament": false,
+      "promo": null,
+      "stream": {
+        "name": "ESPN+",
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+      },
+      "schedule_url": "https://njithighlanders.com/sports/womens-soccer/schedule"
+    },
+    {
+      "uid": "ice-hockey:11705",
+      "sport": "ice-hockey",
+      "opponent": "Rutgers",
+      "where": "home",
+      "date": "2026-10-18",
+      "start": "2026-10-18T20:30:00-04:00",
+      "time_text": "8:30 PM",
+      "location": "Newark, NJ RWJ Barnabas Hockey House",
+      "venue": "RWJ Barnabas Hockey House",
+      "tournament": false,
+      "promo": null,
+      "stream": {
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule",
+        "unconfirmed": true
+      },
+      "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
     },
     {
       "uid": "womens-soccer:11459",
@@ -444,7 +461,7 @@
       "location": "New Rochelle, NY",
       "venue": "New Rochelle, NY",
       "tournament": false,
-      "promo": null,
+      "promo": "America East-Metro Challenge",
       "stream": {
         "name": "ESPN+",
         "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
@@ -500,7 +517,7 @@
       "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
       "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
       "tournament": true,
-      "promo": null,
+      "promo": "America East-Metro Challenge",
       "stream": {
         "name": "ESPN+",
         "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
@@ -651,7 +668,7 @@
       "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
       "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
       "tournament": false,
-      "promo": null,
+      "promo": "America East-Metro Challenge",
       "stream": {
         "name": "ESPN+",
         "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
@@ -669,7 +686,7 @@
       "location": "Poughkeepsie, NY",
       "venue": "Poughkeepsie, NY",
       "tournament": true,
-      "promo": null,
+      "promo": "America East-Metro Challenge",
       "stream": {
         "name": "the live stream",
         "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
@@ -821,7 +838,7 @@
       "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
       "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
       "tournament": false,
-      "promo": null,
+      "promo": "Senior Night",
       "stream": {
         "name": "ESPN+",
         "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
@@ -2628,7 +2645,7 @@
       "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
       "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
       "tournament": false,
-      "promo": null,
+      "promo": "Senior Day",
       "stream": {
         "name": "ESPN+",
         "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
