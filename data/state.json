@@ -1,3 +1,13 @@
 {
-  "sent": {}
+  "sent": {
+    "preview|womens-soccer|2026-10-22": "2026-10-20T15:10:34.417306-04:00"
+  },
+  "preview_kind": {
+    "womens-soccer": 1
+  },
+  "recent": {
+    "womens-soccer:preview_intro": [
+      4
+    ]
+  }
 }
