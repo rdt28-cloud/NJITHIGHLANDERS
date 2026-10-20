@@ -311,7 +311,9 @@ def _result_poll(c, g, rng):
         "volleyball": ["🧹 3–0 NJIT sweep", "🔴 3–1 NJIT", "😤 3–2 NJIT comeback", "🔥 NJIT wins every set by 5+"],
         "tennis": ["🧹 NJIT 4–0", "🔴 NJIT 4–1", "🔴 NJIT 4–2", "😤 NJIT 4–3, clutch"],
     }[fam]
-    qs = [f"{c['e']} Call it now: how does NJIT win {c['matchup']} on {c['day']}?",
+    vs = "at" if g["where"] == "away" else "vs"
+    qs = [f"{c['e']} Call it now: how does NJIT beat {c['opp']} on {c['day']}?",
+          f"{c['e']} NJIT {vs} {c['opp']} on {c['day']}. How do we get the W?",
           f"{c['e']} 2 days out. How big is the NJIT W vs {c['opp']}?",
           f"{c['e']} {c['day']}: {c['matchup']}. Pick the NJIT final score 👇",
           f"{c['e']} Lock in your NJIT win prediction for {c['matchup']} 🔒"]
