@@ -13,11 +13,11 @@
 ### Wed Oct 21, 12:00 PM · #womens-volleyball · preview_poll (result)
 
 > Countdown's on ⏳ NJIT at UAlbany, Friday at 6 PM. Vote below 👇
-> [poll, 54h] 🏐 Call it now: NJIT at UAlbany on Friday. How does it end?
+> [poll, 54h] 🏐 Call it now: how does NJIT win NJIT at UAlbany on Friday?
 >   ◻ 🧹 3–0 NJIT sweep
 >   ◻ 🔴 3–1 NJIT
->   ◻ 😰 3–2, five-set thriller
->   ◻ ⚪ UAlbany wins
+>   ◻ 😤 3–2 NJIT comeback
+>   ◻ 🔥 NJIT wins every set by 5+
 
 ### Wed Oct 21, 12:00 PM · #mens-tennis · preview_poll (food)
 
@@ -171,10 +171,10 @@
 
 ### Sun Oct 25, 09:00 AM · #ice-hockey · home_poll
 
-> [poll, 12h] 🏒 NJIT vs TCNJ: who takes it today?
->   ◻ 🔴 NJIT in a blowout
+> [poll, 12h] 🏒 NJIT vs TCNJ: how does NJIT win today?
+>   ◻ 🔥 NJIT in a blowout
 >   ◻ 🔴 NJIT in a close one
->   ◻ ⚪ TCNJ steals one
+>   ◻ 😤 NJIT comeback win
 
 ### Sun Oct 25, 12:15 PM · #womens-soccer · home_pullup
 
@@ -218,12 +218,11 @@
 ### Wed Oct 28, 12:00 PM · #mens-soccer · preview_poll (result)
 
 > ⚽ NJIT vs Bryant is Friday! Settle this for me 👇
-> [poll, 54h] ⚽ Friday: NJIT vs Bryant. What's happening?
+> [poll, 54h] ⚽ Friday: NJIT vs Bryant. Pick the NJIT final score 👇
 >   ◻ 🔴 NJIT 1–0, a grind
 >   ◻ 🔴 NJIT 2–1
->   ◻ 🔴 NJIT scores 3+
->   ◻ 🤝 Draw
->   ◻ ⚪ Bryant wins
+>   ◻ 🧤 NJIT 3–0, clean sheet
+>   ◻ 🔥 NJIT 4+ goals
 
 ### Thu Oct 29, 12:00 PM · #mens-swimming-diving · preview_poll (food)
 
@@ -303,11 +302,11 @@
 ### Fri Oct 30, 12:00 PM · #ice-hockey · preview_poll (result)
 
 > Getting ready for Sunday 🏒 NJIT at Bloomsburg. Your turn 👇
-> [poll, 52h] 🏒 Call it now: NJIT at Bloomsburg on Sunday. How does it end?
->   ◻ 🔴 NJIT by 3+
+> [poll, 52h] 🏒 Call it now: how does NJIT win NJIT at Bloomsburg on Sunday?
+>   ◻ 🔥 NJIT by 3+
 >   ◻ 🔴 NJIT by 1–2
->   ◻ 🚨 Overtime winner
->   ◻ ⚪ Bloomsburg wins
+>   ◻ 🧤 NJIT shutout
+>   ◻ 🚨 NJIT in overtime
 
 ### Fri Oct 30, 12:00 PM · #fencing · preview_poll (fun)
 
@@ -434,10 +433,10 @@
 
 ### Mon Nov 02, 09:00 AM · #womens-basketball · home_poll
 
-> [poll, 12h] 🏀 NJIT vs Rider: who takes it today?
->   ◻ 🔴 NJIT in a blowout
+> [poll, 12h] 🏀 NJIT vs Rider: how does NJIT win today?
+>   ◻ 🔥 NJIT in a blowout
 >   ◻ 🔴 NJIT in a close one
->   ◻ ⚪ Rider steals one
+>   ◻ 😤 NJIT comeback win
 
 ### Mon Nov 02, 09:00 AM · #mens-basketball · away_morning
 
@@ -485,11 +484,11 @@
 ### Tue Nov 03, 12:00 PM · #womens-basketball · preview_poll (result)
 
 > Countdown's on ⏳ NJIT vs Merrimack, Thursday at time TBA. Vote below 👇
-> [poll, 48h] 🏀 Call it now: NJIT vs Merrimack on Thursday. How does it end?
->   ◻ 🔴 NJIT by 10+
+> [poll, 48h] 🏀 Call it now: how does NJIT win NJIT vs Merrimack on Thursday?
+>   ◻ 🔴 NJIT by 20+, total blowout
+>   ◻ 🔴 NJIT by 10–19
 >   ◻ 🔴 NJIT by 1–9
->   ◻ 😰 Comes down to the last shot
->   ◻ ⚪ Merrimack wins
+>   ◻ 🚨 NJIT on a buzzer-beater
 
 ### Tue Nov 03, 12:00 PM · #womens-soccer · preview_poll (fun)
 

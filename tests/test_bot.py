@@ -215,3 +215,13 @@ def test_one_preview_poll_per_sport_per_day():
     g2 = dict(g1, uid="mens-soccer:dh2", opponent="UMBC (DH)")
     due = [k for k, *_ in alerts.due_alerts([g1, g2], datetime(2026, 11, 1, 12, tzinfo=ET), {})]
     assert due.count("preview_poll") == 1
+
+
+def test_polls_always_back_njit():
+    state = {}
+    for g in games() * 4:
+        for p in (messages.build_preview_poll(g, SPORTS["mens-soccer"], state, rng=random.Random(len(state.get("recent", {})))),
+                  messages.build_poll(g, SPORTS["mens-soccer"], state)):
+            for a in p["poll"]["answers"]:
+                t = a["poll_media"]["text"]
+                assert g["opponent"] not in t and "Draw" not in t and "⚪" not in t, t

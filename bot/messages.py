@@ -249,8 +249,8 @@ def _poll_options(c, opp):
         ]
     o = opp[:28]
     return [
-        (f"{c['e']} {c['Matchup']}: who takes it today?",
-             ["🔴 NJIT in a blowout", "🔴 NJIT in a close one", f"⚪ {o} steals one"]),
+        (f"{c['e']} {c['Matchup']}: how does NJIT win today?",
+         ["🔥 NJIT in a blowout", "🔴 NJIT in a close one", "😤 NJIT comeback win"]),
         (f"{c['e']} Are you pulling up to {c['matchup']} today?",
          ["🙋 I'll be in the stands!", "👯 Bringing friends", "📺 Watching from home", "🔜 Next time!"]),
         (f"{c['e']} Hype meter for {c['matchup']}?",
@@ -294,7 +294,6 @@ def _family(sport_key: str) -> str:
 
 
 def _result_poll(c, g, rng):
-    o = c["opp"][:24]
     fam = _family(g["sport"])
     if c["is_event"] or fam == "meet":
         qs = [f"{c['e']} Bold prediction time: how does NJIT do at {c['matchup']} on {c['day']}?",
@@ -302,19 +301,20 @@ def _result_poll(c, g, rng):
         ans = ["🥇 Someone wins an event", "🏆 Top-3 team finish", "📈 Personal bests everywhere",
                "🔥 Best result of the season", "💪 Solid day, building momentum"]
         return rng.choice(qs), rng.sample(ans, 4)
+    # every answer is an NJIT win: fans just pick HOW we win
     options = {
-        "basketball": ["🔴 NJIT by 10+", "🔴 NJIT by 1–9", "😰 Comes down to the last shot", f"⚪ {o} wins"],
-        "soccer": ["🔴 NJIT 1–0, a grind", "🔴 NJIT 2–1", "🔴 NJIT scores 3+", "🤝 Draw", f"⚪ {o} wins"],
-        "lacrosse": ["🔴 NJIT by 5+", "🔴 NJIT in a close one", "😰 Overtime thriller", f"⚪ {o} wins"],
-        "hockey": ["🔴 NJIT by 3+", "🔴 NJIT by 1–2", "🚨 Overtime winner", f"⚪ {o} wins"],
-        "baseball": ["🔴 NJIT slugfest (8+ runs)", "🔴 NJIT in a pitchers' duel", "🔁 Extra innings", f"⚪ {o} wins"],
-        "volleyball": ["🧹 3–0 NJIT sweep", "🔴 3–1 NJIT", "😰 3–2, five-set thriller", f"⚪ {o} wins"],
-        "tennis": ["🧹 NJIT 4–0", "🔴 NJIT 4–1 / 4–2", "😰 NJIT 4–3, down to the wire", f"⚪ {o} wins"],
+        "basketball": ["🔴 NJIT by 20+, total blowout", "🔴 NJIT by 10–19", "🔴 NJIT by 1–9", "🚨 NJIT on a buzzer-beater"],
+        "soccer": ["🔴 NJIT 1–0, a grind", "🔴 NJIT 2–1", "🧤 NJIT 3–0, clean sheet", "🔥 NJIT 4+ goals"],
+        "lacrosse": ["🔥 NJIT by 10+", "🔴 NJIT by 5–9", "🔴 NJIT in a close one", "🚨 NJIT in overtime"],
+        "hockey": ["🔥 NJIT by 3+", "🔴 NJIT by 1–2", "🧤 NJIT shutout", "🚨 NJIT in overtime"],
+        "baseball": ["🔥 NJIT slugfest (8+ runs)", "🔴 NJIT in a pitchers' duel", "🧤 NJIT shutout", "🎉 NJIT walk-off"],
+        "volleyball": ["🧹 3–0 NJIT sweep", "🔴 3–1 NJIT", "😤 3–2 NJIT comeback", "🔥 NJIT wins every set by 5+"],
+        "tennis": ["🧹 NJIT 4–0", "🔴 NJIT 4–1", "🔴 NJIT 4–2", "😤 NJIT 4–3, clutch"],
     }[fam]
-    qs = [f"{c['e']} Call it now: {c['matchup']} on {c['day']}. How does it end?",
-          f"{c['e']} 2 days out. Your final score prediction for {c['matchup']}?",
-          f"{c['e']} {c['day']}: {c['matchup']}. What's happening?",
-          f"{c['e']} Lock in your pick for {c['matchup']} 🔒"]
+    qs = [f"{c['e']} Call it now: how does NJIT win {c['matchup']} on {c['day']}?",
+          f"{c['e']} 2 days out. How big is the NJIT W vs {c['opp']}?",
+          f"{c['e']} {c['day']}: {c['matchup']}. Pick the NJIT final score 👇",
+          f"{c['e']} Lock in your NJIT win prediction for {c['matchup']} 🔒"]
     return rng.choice(qs), options
 
 
