@@ -15,10 +15,11 @@ from pathlib import Path
 
 from . import alerts, messages, schedule
 from .schedule import ET
-from .sports import SPORTS
+from .sports import AVATAR_URL, DISPLAY_NAME, SPORTS
 
 DATA = Path(__file__).resolve().parent.parent / "data"
 GAMES = DATA / "games.json"
+ROSTERS = DATA / "rosters.json"
 STATE = DATA / "state.json"
 
 
@@ -49,13 +50,26 @@ def cmd_refresh():
     games = sorted(games + kept, key=lambda g: (g["date"], g["start"] or "99", g["sport"]))
     _save(GAMES, {"updated": datetime.now(ET).isoformat(timespec="seconds"), "games": games})
     print(f"Saved {len(games)} games.")
+
+    # rosters change rarely: re-read them once a week (player-pick polls use them)
+    old_r = _load(ROSTERS, {})
+    try:
+        age = datetime.now(ET) - datetime.fromisoformat(old_r.get("updated", "2000-01-01T00:00:00-05:00"))
+    except ValueError:
+        age = timedelta(days=99)
+    if age >= timedelta(days=7) or "--rosters" in sys.argv:
+        print("Reading NJIT rosters…")
+        fresh = schedule.fetch_rosters()
+        merged = {**old_r.get("rosters", {}), **{k: v for k, v in fresh.items() if v}}
+        _save(ROSTERS, {"updated": datetime.now(ET).isoformat(timespec="seconds"), "rosters": merged})
+        print(f"Saved rosters for {len(merged)} sports.")
     return 0
 
 
 def cmd_alerts():
     games = _load(GAMES, {}).get("games", [])
     state = _load(STATE, {})
-    n = alerts.run(games, state)
+    n = alerts.run(games, state, rosters=_load(ROSTERS, {}).get("rosters", {}))
     _save(STATE, state)
     print(f"{n} alert(s) handled.")
     return 0
@@ -71,9 +85,9 @@ def cmd_test():
         if not sport:
             print(f"  ! '{key}' is not a known sport key (see bot/sports.py)")
             continue
-        alerts.post(url, {"username": "NJIT Game Day", "allowed_mentions": {"parse": []},
-                          "content": f"{sport['emoji']} NJIT Game Day bot is connected to **{sport['name']}**! "
-                                     "Game-day alerts will show up here. 🔴⚪"})
+        alerts.post(url, {"username": DISPLAY_NAME, "avatar_url": AVATAR_URL, "allowed_mentions": {"parse": []},
+                          "content": f"{sport['emoji']} Quick check, game-day updates for **{sport['name']}** "
+                                     "will show up right here. Go Highlanders 🔴⚪"})
         print(f"  ✓ {key}")
     missing = [k for k in SPORTS if k not in hooks]
     if missing:
@@ -82,8 +96,9 @@ def cmd_test():
 
 
 def cmd_preview(days=14):
-    """Simulate the next N days minute by minute and write every alert to preview.md."""
+    """Simulate the next N days in 5-minute steps and write every post to preview.md."""
     games = _load(GAMES, {}).get("games", [])
+    rosters = _load(ROSTERS, {}).get("rosters", {})
     state, out = {}, []
     now = datetime.now(ET).replace(second=0, microsecond=0)
     now = now.replace(minute=now.minute - now.minute % 5)  # the real job runs on :00, :05, :10…
@@ -92,19 +107,18 @@ def cmd_preview(days=14):
     t = now
     while t < end:
         for kind, g, mins in list(alerts.due_alerts(games, t, state.setdefault("sent", {}))):
-            payloads = [(kind, messages.build(kind, g, SPORTS[g["sport"]], state, minutes_to_start=mins, ping=alerts.PING_ROLES))]
-            if kind == "home_morning" and alerts.POLLS:
-                payloads.append(("home_poll", messages.build_poll(g, SPORTS[g["sport"]], state, now=t)))
-            state["sent"][f"{g['uid']}|{kind}"] = t.isoformat()
-            for k, payload in payloads:
+            sport = SPORTS[g["sport"]]
+            for k, payload in alerts.payloads_for(kind, g, sport, state, mins, t, rosters):
                 text = messages.plain_text(payload)
-                text = text.replace(f"<@&{SPORTS[g['sport']].get('role_id')}>", f"@{SPORTS[g['sport']]['name']} Fans")
-                out.append(f"### {t.strftime('%a %b %d, %I:%M %p')} · #{g['sport']} · {k}\n\n"
+                text = text.replace(f"<@&{sport.get('role_id')}>", f"@{sport['name']} Fans")
+                label = k + (f" ({payload['_kind']})" if payload.get("_kind") else "")
+                out.append(f"### {t.strftime('%a %b %d, %I:%M %p')} · #{g['sport']} · {label}\n\n"
                            + "\n".join("> " + line for line in text.splitlines()) + "\n")
+            state["sent"][alerts.sent_key(kind, g)] = t.isoformat()
         t += timedelta(minutes=5)
     _save_md = DATA / "preview.md"
-    _save_md.write_text(f"# Upcoming alerts, next {days} days ({len(out)} alerts)\n\n" + "\n".join(out))
-    print(f"Wrote {len(out)} alerts to {_save_md}")
+    _save_md.write_text(f"# Upcoming posts, next {days} days ({len(out)} posts)\n\n" + "\n".join(out))
+    print(f"Wrote {len(out)} posts to {_save_md}")
     return 0
 
 

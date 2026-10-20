@@ -284,3 +284,50 @@ def build_games(pages: dict[str, dict], today: date | None = None, keep_days_bac
             seen.add(key)
             games[g["uid"]] = g
     return sorted(games.values(), key=lambda g: (g["date"], g["start"] or "99", g["sport"]))
+
+
+# ------------------------------------------------------------------- rosters
+
+def extract_roster(html: str) -> list[dict]:
+    """Players on a njithighlanders.com roster page: [{name, num, pos}]."""
+    from bs4 import BeautifulSoup
+
+    soup = BeautifulSoup(html, "html.parser")
+
+    def txt(el):
+        return re.sub(r"\s+", " ", el.get_text(" ")).strip() if el else ""
+
+    out = []
+    for li in soup.select("li.sidearm-roster-player"):
+        name = txt(li.select_one(".sidearm-roster-player-name h3"))
+        if name:
+            out.append({"name": name,
+                        "num": txt(li.select_one(".sidearm-roster-player-jersey-number")),
+                        "pos": txt(li.select_one(".sidearm-roster-player-position-long-short"))})
+    return out
+
+
+def fetch_rosters(delay_seconds: int = 30) -> dict[str, list[dict]]:
+    """Download every roster page politely. Returns {sport_key: [players]}."""
+    import requests
+    from .sports import SITE, SPORTS
+
+    session = requests.Session()
+    session.headers["User-Agent"] = (
+        "NJIT-Gameday-Discord-Bot/1.0 (fan Discord notifications; once a week)")
+    rosters, first = {}, True
+    for key, cfg in SPORTS.items():
+        for path in cfg["paths"]:
+            path = path.replace("/schedule", "/roster")
+            if not first:
+                time.sleep(delay_seconds)
+            first = False
+            try:
+                r = session.get(SITE + path, timeout=30)
+                r.raise_for_status()
+                players = extract_roster(r.text)
+                rosters.setdefault(key, []).extend(players)
+                print(f"  {key:22s} {path}: {len(players)} players")
+            except Exception as e:
+                print(f"  {key:22s} {path}: FAILED ({e})")
+    return rosters

@@ -4,14 +4,19 @@ Automatic game-day alerts for the **NJIT Athletics Updates** Discord. It reads e
 NJIT Highlanders schedule from njithighlanders.com each morning and posts to each
 sport's own channel:
 
-| | Morning of game day (9 AM ET) | Before the game |
-|---|---|---|
-| **Away / neutral** | "Game day!" with time, place and stream | **15 min before:** "We're live on ESPN+ (link)" |
-| **Home** | "We're hosting today!" (+ promos like Senior Night) | **45 min before:** "Pull up and fill the stands!" |
+| | 2 days before (12 PM ET) | Morning of game day (9 AM ET) | Before the game |
+|---|---|---|---|
+| **Away / neutral** | Fun fan poll | "Game day!" with time, place and stream | **15 min before:** "We're live on ESPN+ (link)" |
+| **Home** | Fun fan poll | "We're home today!" (+ promos like Senior Night) + a quick poll | **45 min before:** "Pull up and fill the stands!" |
 
-* Games with a **TBA/TBD** time get the morning alert only.
-* Every alert type has **8 different formats** (plain posts, headlines, embeds, lists,
-  countdown cards…) and the bot never reuses a recent format for the same sport.
+* **2-days-out polls rotate** every time: result predictions → game-day food →
+  pick a player (real names from the team's roster) → other fun fan questions.
+  One poll per sport per day, and it closes when the game starts.
+* Posts appear under **your name and picture** (`DISPLAY_NAME` / `AVATAR_URL` in
+  `bot/sports.py`) and are written casually, like you typed them. Discord still shows
+  a small "APP" tag on them; that can't be turned off.
+* Games with a **TBA/TBD** time get the morning post (and the 2-day poll) only.
+* Every post type has several formats and never reuses a recent one for the same sport.
 * It never pings @everyone.
 * #📅-athletic-events is **not** used by the bot. Keep it for pep rallies and big inter-sport events.
 
@@ -107,7 +112,9 @@ That's it. From now on:
   with its message. To regenerate it locally: `python -m bot preview 14`.
 * **Change the wording:** edit `bot/messages.py`. Each alert type is a list of
   templates, and you can add as many as you like.
-* **Change timings:** `MORNING_HOUR`, `AWAY_LEAD_MIN` and `HOME_LEAD_MIN` at the top of `bot/alerts.py`.
+* **Change timings:** `MORNING_HOUR`, `AWAY_LEAD_MIN`, `HOME_LEAD_MIN`, `PREVIEW_DAYS` and `PREVIEW_HOUR` at the top of `bot/alerts.py`. Turn polls off with `POLLS` / `PREVIEW_POLLS`.
+* **Add poll questions:** `FOOD`, `FUN` and the `_result_poll` / `_player_poll` lists in `bot/messages.py`.
+* **Rosters** are re-read once a week. To force it now, run **Refresh schedules** (it picks them up when they're 7+ days old).
 
 ## Files
 
@@ -117,6 +124,7 @@ bot/schedule.py    reads njithighlanders.com schedule pages → data/games.json
 bot/messages.py    all the message templates + format rotation
 bot/alerts.py      decides what's due and posts to Discord
 data/games.json    the loaded schedule (updated daily by the bot)
+data/rosters.json  team rosters for player polls (updated weekly by the bot)
 data/state.json    which alerts were already sent (updated by the bot)
 .github/workflows  refresh (daily), alerts (every 5 min), test (manual)
 ```

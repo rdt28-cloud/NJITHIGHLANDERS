@@ -1,18 +1,16 @@
-"""Alert messages. Every alert type has many templates in different formats
-(plain text, headline posts, embeds, countdown cards, lists...). The bot
-picks one at random but never repeats any of the last few it used for
-that sport + alert type, so the channel never feels copy-pasted.
+"""Game-day posts and fan polls, written to sound like a person, not a bot.
+
+Every post type has several templates in different shapes (one-liners,
+short lists, headlines, questions). One is picked at random, but never one
+used recently for that sport + post type, so the channel never feels
+copy-pasted. Posts are plain text (no bot-style cards or footers) and go out
+under DISPLAY_NAME / AVATAR_URL from bot/sports.py.
 """
 from __future__ import annotations
 
 import random
 import re
 from datetime import datetime
-
-NJIT_RED = 0xD22630
-GOLD = 0xF2C14E
-NAVY = 0x1F2A44
-WHITE = 0xFFFFFF
 
 EVENT_WORDS = ("invitational", "championship", "classic", "tournament", "open",
                "quarterfinal", "semifinal", "final", "relays", "meet", "cup",
@@ -29,7 +27,11 @@ def _time(g) -> str:
         return "time TBA"
     t = datetime.fromisoformat(g["start"])
     s = t.strftime("%I:%M %p").lstrip("0")
-    return s.replace(":00 ", " ") + " ET"
+    return s.replace(":00 ", " ")
+
+
+def _day(g) -> str:
+    return datetime.fromisoformat(g["date"]).strftime("%A")
 
 
 def _is_event(g) -> bool:
@@ -57,169 +59,113 @@ def matchup(g) -> str:
 
 def _where_line(g) -> str:
     if g["where"] == "home":
-        return g["venue"] if g["venue"] not in ("", "TBA") else "Newark, NJ"
+        return g["venue"] if g["venue"] not in ("", "TBA") else "Newark"
     return g["location"]
-
-
-def _ctx(g, sport, minutes_to_start=None):
-    m = minutes_to_start
-    if m is None or m <= 0:
-        countdown = "right now"
-        mins_word = "NOW"
-    else:
-        countdown = f"in {m} minute{'s' if m != 1 else ''}"
-        mins_word = f"{m} MIN"
-    unconfirmed = bool(g["stream"].get("unconfirmed"))
-    name, url = g["stream"]["name"], g["stream"]["url"]
-    return {
-        # lines that read right whether or not NJIT has listed a stream
-        "watch": (f"📲 Game info & live updates: {url}" if unconfirmed
-                  else f"📺 Watch on {name}: {url}"),
-        "watch_md": (f"[Game info & updates]({url})" if unconfirmed else f"[{name}]({url})"),
-        "watch_short": ("live updates on the game page" if unconfirmed else f"streaming on {name}"),
-        "cheer": ("Follow along and send good vibes!" if unconfirmed else "Can't be there? Watch with us online."),
-        "e": sport["emoji"], "sport": sport["name"], "noun": sport["noun"],
-        "start_word": sport["start_word"], "opp": g["opponent"],
-        "matchup": matchup(g), "time": _time(g), "where": _where_line(g),
-        "stream": "the game page" if g["stream"].get("unconfirmed") else g["stream"]["name"],
-        "stream_url": g["stream"]["url"],
-        "schedule": g["schedule_url"], "countdown": countdown, "mins": mins_word,
-        "is_event": _is_event(g),
-    }
-
-
-def _embed(title, desc=None, color=NJIT_RED, fields=None, footer=None, url=None):
-    e = {"title": title, "color": color}
-    if desc:
-        e["description"] = desc
-    if fields:
-        e["fields"] = [{"name": n, "value": v, "inline": inline} for n, v, inline in fields]
-    if footer:
-        e["footer"] = {"text": footer}
-    if url:
-        e["url"] = url
-    return e
 
 
 def _cap(s: str) -> str:
     return s[:1].upper() + s[1:]
 
 
-HYPE = ["Go Highlanders! 🔴⚪", "Let's go NJIT! 🗡️", "Highlander pride! 🔴", "Bring the energy! ⚡",
-        "Red and white all day! 🔴⚪", "Let's get this W! 💪", "Highlanders rise! 🏴"]
+def _ctx(g, sport, minutes_to_start=None):
+    m = minutes_to_start
+    countdown = "any minute now" if (m is None or m <= 0) else f"in {m} min"
+    unconfirmed = bool(g["stream"].get("unconfirmed"))
+    name, url = g["stream"]["name"], g["stream"]["url"]
+    return {
+        # watch lines that read right whether or not NJIT has listed a stream
+        "watch": (f"Updates here: {url}" if unconfirmed else f"It's on {name}: {url}"),
+        "watch_short": ("updates on the NJIT site" if unconfirmed else f"on {name}"),
+        "stream": "the stream" if unconfirmed else name, "stream_url": url,
+        "e": sport["emoji"], "sport": sport["name"], "noun": sport["noun"],
+        "start_word": sport["start_word"], "opp": g["opponent"],
+        "matchup": matchup(g), "Matchup": _cap(matchup(g)), "time": _time(g), "day": _day(g),
+        "where": _where_line(g), "schedule": g["schedule_url"], "countdown": countdown,
+        "is_event": _is_event(g),
+    }
 
 
-def _hype():
-    return random.choice(HYPE)
+SIGNOFF = ["Go Highlanders 🔴⚪", "Let's go NJIT 🗡️", "LET'S GOOO 🔴", "Highlander pride 🔴⚪",
+           "Let's get this W 💪", "Red and white all day 🔴⚪", "Bring it home 🗡️", ""]
 
 
-# ------------------------------------------------------- AWAY: morning alert
+def _so():
+    s = random.choice(SIGNOFF)
+    return ("\n" + s) if s else ""
+
+
+# ------------------------------------------------------- AWAY: morning post
 
 def _away_morning(c):
-    soon = ("We'll ping you right before it starts. 🔔" if c["stream"] == "the game page"
-            else f"We'll ping you when we go live on {c['stream']}. 🔔")
     return [
-        lambda: {"content": f"{c['e']} **GAME DAY!** {c['e']}\n{c['sport']}: **{_cap(c['matchup'])}**\n🕒 {c['time']} · 📍 {c['where']}\n{c['watch']}\n{_hype()}"},
-        lambda: {"embeds": [_embed(f"{c['e']} It's {c['sport']} game day!",
-                                   f"The Highlanders hit the road today: **{c['matchup']}**.",
-                                   fields=[("🕒 Start", c["time"], True), ("📍 Where", c["where"], True),
-                                           ("📺 Watch", c["watch_md"], True)],
-                                   footer=f"{c['cheer']} {_hype()}")]},
-        lambda: {"content": f"☀️ Rise and shine, Highlanders!\nNJIT {c['sport']} is on the road today {c['e']}\n> **{_cap(c['matchup'])}**\n> {c['time']} in {c['where']}\n{soon}"},
-        lambda: {"content": f"🚌 **ROAD TRIP** 🚌\n{c['e']} {c['sport']} heads to {c['where']} today.\n\n**{_cap(c['matchup'])}** · {c['time']}\n{c['watch']}"},
-        lambda: {"embeds": [_embed(f"📅 TODAY · {c['matchup'].upper()}"[:256],
-                                   f"{c['e']} **{c['sport']}**\n\n🕒 **{c['time']}**\n📍 {c['where']}\n{c['watch_md']}",
-                                   color=NAVY, footer=_hype())]},
-        lambda: {"content": f"{c['e']}{c['e']}{c['e']}\n# GAME DAY\n**{c['sport']}** · {_cap(c['matchup'])}\n-# {c['time']} · {c['where']} · {c['watch_short']}"},
-        lambda: {"content": f"Mark your calendar 🗓️ {c['sport']} competes today!\n• **What:** {_cap(c['matchup'])}\n• **Time:** {c['time']}\n• **Location:** {c['where']}\n• {c['watch']}\n{_hype()}"},
-        lambda: {"embeds": [_embed(f"{c['e']} Away {c['noun']} today",
-                                   f"*{_cap(c['start_word'])} at {c['time']}.*\n**{_cap(c['matchup'])}** in {c['where']}.\n\n{c['cheer']} 👉 {c['watch_md']}",
-                                   color=GOLD, url=c["schedule"])]},
+        lambda: f"GAME DAY {c['e']}\n{c['Matchup']}, {c['time']} in {c['where']}.\n{c['watch']}{_so()}",
+        lambda: f"Morning Highlanders ☀️ {c['sport']} is on the road today: **{c['matchup']}**, {c['time']}.\n"
+                f"Can't make the trip? {c['watch']}",
+        lambda: f"{c['e']} {c['sport']} today\n• {c['Matchup']}\n• {c['time']}\n• {c['where']}\n• {c['watch_short']}{_so()}",
+        lambda: f"Road game today {c['e']} Our {c['sport'].lower()} squad takes on {c['opp']} in {c['where']} at {c['time']}. "
+                f"I'll post again right before it starts.{_so()}",
+        lambda: f"# {c['e']} Game day\n{c['Matchup']} · {c['time']} · {c['where']}\n-# {c['watch_short']}",
+        lambda: f"Who's watching {c['sport'].lower()} tonight? {c['e']} {c['Matchup']} at {c['time']}.\n{c['watch']}",
+        lambda: f"Don't forget, {c['sport']} plays today! {c['e']}\n{c['Matchup']} ({c['where']}), {c['start_word']} at {c['time']}.{_so()}",
+        lambda: f"{c['e']}{c['e']} {c['Matchup'].upper()} {c['e']}{c['e']}\nToday, {c['time']}. Send the team some love 🙌\n{c['watch']}",
     ]
 
 
-# --------------------------------------------- AWAY: 15 minutes / we're live
+# ---------------------------------------- AWAY: 15 minutes before (stream)
 
 def _away_live(c):
     return [
-        lambda: {"content": f"🔴 **WE'RE LIVE {c['countdown'].upper()}!**\n{c['e']} {c['matchup']} is on **{c['stream']}**\n👉 {c['stream_url']}"},
-        lambda: {"embeds": [_embed(f"🔴 LIVE on {c['stream']}",
-                                   f"{c['e']} **{c['sport']}**: {c['matchup']}\n{_cap(c['start_word'])} {c['countdown']}!",
-                                   url=c["stream_url"], fields=[("Watch now", f"[Open {c['stream']}]({c['stream_url']})", False)],
-                                   footer=_hype())]},
-        lambda: {"content": f"⏰ {c['mins']} TO GO ⏰\n{c['e']} {c['sport']} {c['start_word']} {c['countdown']}. Grab a seat on the couch and tune in to {c['stream']}: {c['stream_url']}"},
-        lambda: {"content": f"📺 Highlanders, tune in! {c['e']}\n**{c['matchup']}** goes live on {c['stream']} {c['countdown']}.\n<{c['stream_url']}>\n{_hype()}"},
-        lambda: {"embeds": [_embed(f"⏱️ {c['mins']} · {c['matchup']}",
-                                   f"{c['e']} Streaming on **[{c['stream']}]({c['stream_url']})**\nDrop your predictions below 👇",
-                                   color=NAVY)]},
-        lambda: {"content": f"# 🔴 LIVE SOON\n{c['e']} {c['sport']} · **{c['matchup']}**\n-# {c['start_word']} {c['countdown']} · watch on {c['stream']}: {c['stream_url']}"},
-        lambda: {"content": f"3… 2… 1… {c['e']}\nNJIT {c['sport']} is about to go live on **{c['stream']}** ({c['countdown']})!\n🔗 {c['stream_url']}"},
-        lambda: {"embeds": [_embed(f"{c['e']} Lights, camera, Highlanders!",
-                                   f"We're live on {c['stream']} {c['countdown']}.\n**{c['matchup']}** · {c['where']}",
-                                   color=GOLD, url=c["stream_url"], footer="Click the title to watch · " + _hype())]},
+        lambda: f"We're live {c['countdown']}! {c['e']} {c['Matchup']} on {c['stream']}\n{c['stream_url']}",
+        lambda: f"🔴 {c['Matchup']} starts {c['countdown']}, tune in on {c['stream']}: {c['stream_url']}{_so()}",
+        lambda: f"{c['start_word'].capitalize()} {c['countdown']} {c['e']} Pull up the stream: {c['stream_url']}\nDrop your predictions below 👇",
+        lambda: f"Almost time! {c['e']} {c['sport']} on {c['stream']} {c['countdown']}.\n<{c['stream_url']}>",
+        lambda: f"# 🔴 Live {c['countdown']}\n{c['Matchup']}\n-# watch on {c['stream']}: {c['stream_url']}",
+        lambda: f"3… 2… 1… {c['e']} {c['Matchup']} goes live {c['countdown']}. Link: {c['stream_url']}{_so()}",
+        lambda: f"Grab a snack and get on {c['stream']} 🍿 {c['Matchup']}, {c['start_word']} {c['countdown']}.\n{c['stream_url']}",
     ]
 
 
-# ------------- AWAY: 15 minutes, when NJIT hasn't listed a stream (meets, etc.)
+# --------------------------- AWAY: 15 minutes before (no stream listed yet)
 
 def _away_soon(c):
     return [
-        lambda: {"content": f"⏰ **{c['mins']} TO GO!** {c['e']}\n{c['sport']}: **{c['matchup']}** starts {c['countdown']} in {c['where']}.\n📲 Game info & live updates: {c['schedule']}\n{_hype()}"},
-        lambda: {"embeds": [_embed(f"{c['e']} Almost go time!",
-                                   f"**{c['matchup']}**\n{_cap(c['start_word'])} {c['countdown']} · {c['where']}",
-                                   url=c["schedule"], fields=[("Follow along", f"[Schedule, stream & stats]({c['schedule']})", False)],
-                                   footer=_hype())]},
-        lambda: {"content": f"🔔 Heads up, Highlanders!\n{c['e']} {c['sport']} {c['start_word']} {c['countdown']}. Send the squad some good vibes 🙌\n<{c['schedule']}>"},
-        lambda: {"content": f"# {c['e']} {c['mins']}\n**{c['matchup']}** · {c['where']}\n-# {c['start_word']} {c['countdown']} · updates: {c['schedule']}"},
-        lambda: {"embeds": [_embed(f"⏱️ {c['matchup']}",
-                                   f"{c['e']} {_cap(c['start_word'])} {c['countdown']}!\nDrop your predictions below 👇",
-                                   color=NAVY, url=c["schedule"])]},
-        lambda: {"content": f"3… 2… 1… {c['e']}\nNJIT {c['sport']} is about to get going ({c['countdown']}) at {c['where']}!\nCheck the game page for any stream or live stats: {c['schedule']}"},
+        lambda: f"Almost go time {c['e']} {c['Matchup']} starts {c['countdown']}.\nLive updates: {c['schedule']}{_so()}",
+        lambda: f"{c['start_word'].capitalize()} {c['countdown']}! {c['e']} Send the team some good vibes 🙌\n<{c['schedule']}>",
+        lambda: f"Heads up, {c['sport']} gets going {c['countdown']} in {c['where']} {c['e']}\nI'll keep an eye on results: {c['schedule']}",
+        lambda: f"# {c['e']} Starting {c['countdown']}\n{c['Matchup']} · {c['where']}\n-# updates: {c['schedule']}",
+        lambda: f"Here we go {c['e']} {c['Matchup']}, {c['countdown']}. Drop your predictions 👇{_so()}",
+        lambda: f"3… 2… 1… {c['e']} {c['sport']} is about to start ({c['countdown']}). Follow along: {c['schedule']}",
     ]
 
 
-# -------------------------------------------------------- HOME: morning alert
+# --------------------------------------------------------- HOME: morning post
 
 def _home_morning(c):
     return [
-        lambda: {"content": f"🏟️ **WE'RE HOSTING TODAY!** 🏟️\n{c['e']} {c['sport']}: **{c['matchup']}**\n🕒 {c['time']} · 📍 {c['where']}\nPack the stands, Highlanders! 🔴⚪"},
-        lambda: {"embeds": [_embed(f"{c['e']} HOME GAME DAY",
-                                   f"The Highlanders host today, and we need YOU there!\n**{c['matchup']}**",
-                                   fields=[("🕒 Start", c["time"], True), ("📍 Venue", c["where"], True),
-                                           ("📣 Bring", "Your loudest voice + your red", True)],
-                                   footer=_hype())]},
-        lambda: {"content": f"☀️ Good morning, NJIT!\nHome {c['noun']} today {c['e']}\n> **{c['matchup']}**\n> {c['time']} at {c['where']}\nBring a friend. Let's make it loud. 📣"},
-        lambda: {"content": f"🔴⚪ **HOME SWEET HOME** ⚪🔴\n{c['e']} {c['sport']} defends Newark today!\n**{c['matchup']}** · {c['time']} · {c['where']}\nSee you in the stands 👀"},
-        lambda: {"embeds": [_embed(f"📣 Newark, we play today!",
-                                   f"{c['e']} **{c['sport']}**\n{c['matchup']}\n\n🕒 **{c['time']}**\n📍 **{c['where']}**\n\nFill the stands and show them whose house this is. 🏠",
-                                   color=GOLD)]},
-        lambda: {"content": f"{c['e']}{c['e']}{c['e']}\n# HOME {c['noun'].upper()} TODAY\n**{c['matchup']}**\n-# {c['time']} · {c['where']} · wear red!"},
-        lambda: {"content": f"Today's plans? Sorted ✅\n• **What:** {c['sport']}, {c['matchup']}\n• **When:** {c['time']}\n• **Where:** {c['where']}\n• **Dress code:** NJIT red 🔴\n{_hype()}"},
-        lambda: {"embeds": [_embed(f"{c['e']} {c['matchup']}",
-                                   f"*We're hosting!* {_cap(c['start_word'])} at **{c['time']}** at {c['where']}.\nEvery seat filled = more noise = more wins. 📈",
-                                   color=NAVY, url=c["schedule"], footer=_hype())]},
+        lambda: f"WE'RE HOME TODAY 🏟️ {c['e']}\n{c['Matchup']}, {c['time']} at {c['where']}. Come out and make some noise!",
+        lambda: f"Morning Highlanders ☀️ {c['sport']} hosts {c['opp']} today at {c['time']} ({c['where']}). "
+                f"Bring a friend, wear red 🔴",
+        lambda: f"{c['e']} Home {c['noun']} today\n• {c['Matchup']}\n• {c['time']}\n• {c['where']}\n• dress code: red 🔴{_so()}",
+        lambda: f"Who's coming out today? 🙋 {c['Matchup']} at {c['where']}, {c['start_word']} at {c['time']}. Let's pack it {c['e']}",
+        lambda: f"# {c['e']} Home game day\n{c['Matchup']} · {c['time']}\n-# {c['where']} · see you there",
+        lambda: f"Today's plans: sorted ✅ {c['sport']} is home vs {c['opp']}, {c['time']} at {c['where']}.{_so()}",
+        lambda: f"Newark, we play today {c['e']} {c['Matchup']} at {c['time']}. Every seat filled = more noise = more wins 📈",
+        lambda: f"{c['e']}{c['e']} HOME {c['noun'].upper()} {c['e']}{c['e']}\n{c['Matchup']}, {c['time']}, {c['where']}. Don't miss it!",
     ]
 
 
-# ---------------------------------------------- HOME: 45 minutes / pull up!
+# ------------------------------------------- HOME: 45 minutes before, pull up
 
 def _home_pullup(c):
     return [
-        lambda: {"content": f"📣 **PULL UP, HIGHLANDERS!** 📣\n{c['e']} {c['matchup']}: {c['start_word']} {c['countdown']} at {c['where']}.\nLet's fill those stands! 🏟️🔴"},
-        lambda: {"embeds": [_embed(f"🏃‍♂️ Get to {c['where']}!",
-                                   f"{c['e']} **{c['sport']}** {c['start_word']} {c['countdown']}.\nThe best seats go fast. Grab yours and bring the noise. 🔊",
-                                   fields=[("Matchup", c["matchup"], True), ("Start", c["time"], True)],
-                                   footer=_hype())]},
-        lambda: {"content": f"⏰ **{c['mins']} UNTIL {c['start_word'].upper()}** ⏰\n{c['e']} {c['matchup']} at {c['where']}\nDrop what you're doing and come support the squad! 🙌"},
-        lambda: {"content": f"🚨 Stands check 🚨\n{c['e']} {c['sport']} {c['start_word']} {c['countdown']}. We want a FULL house at {c['where']}!\nTag a friend who's coming 👇"},
-        lambda: {"embeds": [_embed(f"🔥 It's almost time, Newark!",
-                                   f"{c['e']} {c['matchup']}\n📍 **{c['where']}**\n🕒 {c['start_word']} {c['countdown']}\n\nRed out the stands. Every cheer counts! 🔴",
-                                   color=GOLD)]},
-        lambda: {"content": f"# 🏟️ DOORS ARE OPEN\n{c['e']} **{c['matchup']}**\n-# {c['start_word']} {c['countdown']} · {c['where']} · be loud, be proud"},
-        lambda: {"content": f"Still on the fence? 🤔 Here's your sign:\n{c['e']} {c['sport']} plays at home {c['countdown']}.\n📍 {c['where']} · {c['time']}\nCome watch the Highlanders work! 💪"},
-        lambda: {"embeds": [_embed(f"{c['e']} HIGHLANDERS NEED YOU",
-                                   f"{_cap(c['start_word'])} {c['countdown']} at **{c['where']}**.\nShow up, show out, and make it a home-field advantage. 🗡️",
-                                   color=NAVY, footer=_hype())]},
+        lambda: f"PULL UP 📣 {c['e']} {c['Matchup']}, {c['start_word']} {c['countdown']} at {c['where']}. Let's fill those stands!",
+        lambda: f"{c['countdown'].capitalize()} until {c['start_word']} 🏟️ Get to {c['where']} and bring the noise {c['e']}",
+        lambda: f"Still on the fence? Here's your sign 👀 {c['sport']} is home {c['countdown']} at {c['where']}.{_so()}",
+        lambda: f"Stands check 🚨 {c['Matchup']} starts {c['countdown']}. Who's already there? Tag a friend who's coming 👇",
+        lambda: f"# 🏟️ Doors are open\n{c['Matchup']} · {c['start_word']} {c['countdown']}\n-# {c['where']} · be loud",
+        lambda: f"It's almost time, Newark {c['e']} {c['start_word'].capitalize()} {c['countdown']} at {c['where']}. Red out the stands 🔴",
+        lambda: f"On my way to {c['where']} 🏃 {c['Matchup']} {c['countdown']}. See you there {c['e']}",
+        lambda: f"The team needs us 🗣️ {c['sport']} {c['start_word']} {c['countdown']} at {c['where']}. Show up, show out {c['e']}",
     ]
 
 
@@ -232,98 +178,238 @@ TEMPLATES = {
 }
 
 
-def build(kind: str, game: dict, sport: dict, state: dict, minutes_to_start=None, rng=random, ping=True):
-    """Return a Discord webhook payload for an alert, rotating formats.
+def _pick(key: str, n: int, state: dict, rng) -> int:
+    """Random index in range(n), avoiding the last few used for `key`."""
+    recent = state.setdefault("recent", {}).setdefault(key, [])
+    avoid = recent[-min(n - 1, 4):] if recent else []
+    idx = rng.choice([i for i in range(n) if i not in avoid] or list(range(n)))
+    recent.append(idx)
+    del recent[:-6]
+    return idx
 
-    `state["recent"]` remembers which templates were used lately per
-    sport + alert type so the same format never shows up twice in a row.
-    """
+
+def _author(payload: dict) -> dict:
+    from .sports import AVATAR_URL, DISPLAY_NAME
+    payload["username"] = DISPLAY_NAME
+    if AVATAR_URL:
+        payload["avatar_url"] = AVATAR_URL
+    return payload
+
+
+def build(kind: str, game: dict, sport: dict, state: dict, minutes_to_start=None, rng=random, ping=True):
+    """Return a Discord webhook payload for a game-day post, rotating formats."""
     ctx = _ctx(game, sport, minutes_to_start)
     if kind == "away_live" and game["stream"].get("unconfirmed"):
         kind = "away_soon"  # don't claim "we're live on X" when NJIT hasn't listed a stream
     options = TEMPLATES[kind](ctx)
-    recent_key = f"{game['sport']}:{kind}"
-    recent = state.setdefault("recent", {}).setdefault(recent_key, [])
-    avoid = recent[-min(len(options) - 1, 4):] if recent else []
-    choices = [i for i in range(len(options)) if i not in avoid] or list(range(len(options)))
-    idx = rng.choice(choices)
-    recent.append(idx)
-    del recent[:-6]
-    payload = options[idx]()
+    text = options[_pick(f"{game['sport']}:{kind}", len(options), state, rng)]()
     promo = game.get("promo")
     if promo and kind.startswith("home"):
-        extra = f"🎉 **{promo}**: don't miss it!"
-        if payload.get("embeds"):
-            e = payload["embeds"][0]
-            e["description"] = (e.get("description", "") + "\n\n" + extra).strip()
-        else:
-            payload["content"] += "\n" + extra
-    payload["allowed_mentions"] = {"parse": []}  # never ping @everyone by accident
+        text += f"\nAlso it's **{promo}** 🎉 don't miss it!"
+    payload = {"content": text, "allowed_mentions": {"parse": []}}  # never @everyone
     role = sport.get("role_id")
     if role and ping:
-        # ping only this sport's fans (people who picked the "<Sport> Fans" role)
-        mention = f"<@&{role}>"
-        payload["content"] = (mention + " " + payload["content"]) if payload.get("content") else mention
+        payload["content"] = f"<@&{role}> " + payload["content"]
         payload["allowed_mentions"] = {"parse": [], "roles": [role]}
-    payload["username"] = "NJIT Game Day"
-    return payload
+    return _author(payload)
 
 
-# ------------------------------------------- HOME: morning prediction poll
+def _poll(question: str, answers: list[str], hours: int, intro: str | None = None) -> dict:
+    payload = {
+        "allowed_mentions": {"parse": []},
+        "poll": {
+            "question": {"text": question[:300]},
+            "answers": [{"poll_media": {"text": a[:55]}} for a in answers[:10]],
+            "duration": max(1, min(168, int(hours))),
+            "allow_multiselect": False,
+        },
+    }
+    if intro:
+        payload["content"] = intro
+    return _author(payload)
+
+
+def _hours_until(game, now, after=3, default=12):
+    if game.get("start") and now is not None:
+        left = (datetime.fromisoformat(game["start"]) - now).total_seconds() / 3600 + after
+        return max(1, int(left + 0.999))
+    return default
+
+
+# ------------------------------------------- HOME: game-morning poll
 
 def _poll_options(c, opp):
     """Each entry: (question, [answers]). Answers ≤ 55 chars (Discord limit)."""
     if c["is_event"]:
         return [
-            (f"{c['e']} How will NJIT do at {c['matchup']} today?",
+            (f"{c['e']} How does NJIT do at {c['matchup']} today?",
              ["🥇 Podium finishes!", "📈 Big personal bests", "💪 Solid team showing", "🔥 Best result of the season"]),
-            (f"{c['e']} Are you coming out to support NJIT {c['sport']} today?",
+            (f"{c['e']} Coming out to support NJIT {c['sport']} today?",
              ["🙋 I'll be there!", "📲 Following along online", "🔜 Next time!"]),
-            (f"{c['e']} Hype check for today's {c['noun']}: how confident are you?",
-             ["🔥🔥🔥 Max hype", "🔥🔥 Feeling good", "🔥 Cautiously optimistic"]),
         ]
     o = opp[:28]
     return [
-        (f"{c['e']} {c['matchup']}: who takes it today?",
-         ["🔴 NJIT in a blowout", "🔴 NJIT in a close one", f"⚪ {o} steals one"]),
+        (f"{c['e']} {c['Matchup']}: who takes it today?",
+             ["🔴 NJIT in a blowout", "🔴 NJIT in a close one", f"⚪ {o} steals one"]),
         (f"{c['e']} Are you pulling up to {c['matchup']} today?",
          ["🙋 I'll be in the stands!", "👯 Bringing friends", "📺 Watching from home", "🔜 Next time!"]),
-        (f"{c['e']} Predict it: how does NJIT win vs {o}?",
-         ["🛡️ Lockdown defense", "⚡ Explosive offense", "🧠 Clutch at the end", "🔥 Dominant start to finish"]),
         (f"{c['e']} Hype meter for {c['matchup']}?",
          ["🔥🔥🔥 Max hype", "🔥🔥 Feeling good", "🔥 Nervous but believing"]),
-        (f"{c['e']} Who's the X-factor for NJIT {c['sport']} today?",
+        (f"{c['e']} Who's the X-factor for NJIT today?",
          ["🌟 Our stars", "🪑 The bench", "📣 The home crowd", "🧑‍🏫 The coaching staff"]),
     ]
 
 
 def build_poll(game: dict, sport: dict, state: dict, now=None, rng=random):
-    """A Discord poll posted right after the home-game morning alert."""
-    from datetime import datetime as _dt
+    """A quick poll posted right after the home-game morning post."""
     ctx = _ctx(game, sport)
     options = _poll_options(ctx, game["opponent"])
-    key = f"{game['sport']}:home_poll"
-    recent = state.setdefault("recent", {}).setdefault(key, [])
-    avoid = recent[-min(len(options) - 1, 3):] if recent else []
-    idx = rng.choice([i for i in range(len(options)) if i not in avoid] or list(range(len(options))))
-    recent.append(idx)
-    del recent[:-6]
-    question, answers = options[idx]
-    # keep the poll open until about 3 hours after the start (or 12h if time TBA)
-    hours = 12
-    if game.get("start") and now is not None:
-        left = (_dt.fromisoformat(game["start"]) - now).total_seconds() / 3600 + 3
-        hours = max(1, min(24, int(left + 0.999)))
-    return {
-        "username": "NJIT Game Day",
-        "allowed_mentions": {"parse": []},
-        "poll": {
-            "question": {"text": question[:300]},
-            "answers": [{"poll_media": {"text": a[:55]}} for a in answers],
-            "duration": hours,
-            "allow_multiselect": False,
-        },
-    }
+    question, answers = options[_pick(f"{game['sport']}:home_poll", len(options), state, rng)]
+    return _poll(question, answers, min(24, _hours_until(game, now)))
+
+
+# ------------------------------------- 2 DAYS OUT: rotating fan polls
+
+FOOD = ["🍕 Pizza", "🍗 Wings", "🌭 Hot dogs", "🌯 Halal cart", "🥨 Soft pretzels", "🍔 Burgers",
+        "🌮 Tacos", "🍿 Popcorn", "🍖 Ironbound Portuguese BBQ", "🥯 Bagel run", "🍩 Donuts",
+        "🧋 Bubble tea", "🍜 Ramen", "🥤 Just an energy drink", "🍪 Cookies", "🥟 Dumplings"]
+
+SCORE_WORDS = {  # what NJIT "scores" in each sport, for player questions
+    "basketball": "leads NJIT in scoring", "soccer": "scores first for NJIT",
+    "lacrosse": "scores first for NJIT", "hockey": "scores first for NJIT",
+    "volleyball": "leads NJIT in kills", "baseball": "gets NJIT's first hit",
+    "tennis": "picks up the first W for NJIT",
+}
+NON_SCORERS = {  # positions left out of "who scores" questions, per sport
+    "soccer": {"GK"}, "hockey": {"G"}, "lacrosse": {"GOALKEEPER", "G"},
+    "volleyball": {"L", "LIB", "DS", "S"}, "baseball": {"RHP", "LHP", "P"},
+}
+
+
+def _family(sport_key: str) -> str:
+    for f in ("basketball", "soccer", "lacrosse", "hockey", "volleyball", "baseball", "tennis"):
+        if f in sport_key:
+            return f
+    return "meet"
+
+
+def _result_poll(c, g, rng):
+    o = c["opp"][:24]
+    fam = _family(g["sport"])
+    if c["is_event"] or fam == "meet":
+        qs = [f"{c['e']} Bold prediction time: how does NJIT do at {c['matchup']} on {c['day']}?",
+              f"{c['e']} {c['day']}'s {c['noun']}: what's the headline going to be?"]
+        ans = ["🥇 Someone wins an event", "🏆 Top-3 team finish", "📈 Personal bests everywhere",
+               "🔥 Best result of the season", "💪 Solid day, building momentum"]
+        return rng.choice(qs), rng.sample(ans, 4)
+    options = {
+        "basketball": ["🔴 NJIT by 10+", "🔴 NJIT by 1–9", "😰 Comes down to the last shot", f"⚪ {o} wins"],
+        "soccer": ["🔴 NJIT 1–0, a grind", "🔴 NJIT 2–1", "🔴 NJIT scores 3+", "🤝 Draw", f"⚪ {o} wins"],
+        "lacrosse": ["🔴 NJIT by 5+", "🔴 NJIT in a close one", "😰 Overtime thriller", f"⚪ {o} wins"],
+        "hockey": ["🔴 NJIT by 3+", "🔴 NJIT by 1–2", "🚨 Overtime winner", f"⚪ {o} wins"],
+        "baseball": ["🔴 NJIT slugfest (8+ runs)", "🔴 NJIT in a pitchers' duel", "🔁 Extra innings", f"⚪ {o} wins"],
+        "volleyball": ["🧹 3–0 NJIT sweep", "🔴 3–1 NJIT", "😰 3–2, five-set thriller", f"⚪ {o} wins"],
+        "tennis": ["🧹 NJIT 4–0", "🔴 NJIT 4–1 / 4–2", "😰 NJIT 4–3, down to the wire", f"⚪ {o} wins"],
+    }[fam]
+    qs = [f"{c['e']} Call it now: {c['matchup']} on {c['day']}. How does it end?",
+          f"{c['e']} 2 days out. Your final score prediction for {c['matchup']}?",
+          f"{c['e']} {c['day']}: {c['matchup']}. What's happening?",
+          f"{c['e']} Lock in your pick for {c['matchup']} 🔒"]
+    return rng.choice(qs), options
+
+
+def _food_poll(c, g, rng):
+    home = g["where"] == "home"
+    qs = ([f"{c['e']} What are you grabbing before {c['matchup']} on {c['day']}?",
+           f"{c['e']} Pre-game meal before we head to {c['where']}?",
+           f"{c['e']} Official snack of {c['day']}'s home {c['noun']}?"] if home else
+          [f"{c['e']} Watch-party menu for {c['matchup']} on {c['day']}?",
+           f"{c['e']} What's the official snack of {c['day']}'s {c['noun']}?",
+           f"{c['e']} You can only eat ONE thing while watching {c['matchup']}. What is it?"])
+    return rng.choice(qs), rng.sample(FOOD, 5)
+
+
+def _player_poll(c, g, roster, rng):
+    fam = _family(g["sport"])
+    pool = [p for p in roster if p.get("name")]
+    if fam in SCORE_WORDS and fam != "tennis":
+        skip = NON_SCORERS.get(fam, set())
+        pool = [p for p in pool if (p.get("pos") or "").upper() not in skip] or pool
+    if len(pool) < 3:
+        return None
+    picks = rng.sample(pool, min(4, len(pool)))
+    ans = [(f"#{p['num']} " if p.get("num") else "") + p["name"] for p in picks]
+    if c["is_event"] or fam == "meet":
+        qs = [f"{c['e']} Who has the standout performance at {c['matchup']} on {c['day']}?",
+              f"{c['e']} Who's your Highlander to watch at {c['matchup']}?"]
+    else:
+        qs = [f"{c['e']} Who {SCORE_WORDS.get(fam, 'leads NJIT')} vs {c['opp']} on {c['day']}?",
+              f"{c['e']} Player of the game vs {c['opp']}? Make your pick 👇",
+              f"{c['e']} Who's going off on {c['day']}? 🔥",
+              f"{c['e']} Your X-factor for {c['matchup']}?"]
+    return rng.choice(qs), ans + ["🤷 Someone else!"]
+
+
+FUN = [
+    ("{e} Where are you watching {matchup} on {day}?",
+     ["🏟️ In person", "🛋️ On the couch", "📱 Sneaking it in class", "👯 With the crew", "🍻 At a watch party"]),
+    ("{e} Game-day fit check for {day}?",
+     ["🔴 Full red, head to toe", "👕 Vintage NJIT gear", "🧢 Just the hat", "🧥 Whatever's clean lol"]),
+    ("{e} Be honest: what's your game-day superstition?",
+     ["🧦 Lucky socks", "🍕 Same meal every time", "🤐 Never say 'shutout' out loud", "🪑 Same seat, always", "😎 None, I'm built different"]),
+    ("{e} Hype level for {day}, 1 to 🔥?",
+     ["🔥", "🔥🔥", "🔥🔥🔥", "🔥🔥🔥🔥 I'm already yelling"]),
+    ("{e} Best way to celebrate a W?",
+     ["🕺 Dance it out", "🍕 Team pizza", "📸 Post it everywhere", "🗣️ Scream in the group chat"]),
+    ("{e} Pick the warm-up playlist for {day}",
+     ["🎤 Hip-hop", "🎧 EDM", "🎸 Rock", "💃 Reggaeton", "🎶 Throwbacks"]),
+    ("{e} How many times will you check the score during class on {day}?",
+     ["😇 Zero, I'm focused", "📱 Every 10 minutes", "👀 Constantly", "🏃 Skipping class to watch"]),
+    ("{e} Who's the loudest Highlander fan you know?",
+     ["🙋 Me, obviously", "👯 My roommate", "👨‍👩‍👧 My family", "🗡️ The mascot"]),
+]
+
+
+def _fun_poll(c, g, rng):
+    q, ans = rng.choice(FUN)
+    return q.format(e=c["e"], matchup=c["matchup"], day=c["day"]), ans
+
+
+PREVIEW_INTROS = [
+    "2 days until {matchup} {e} ({day}, {time}). Let's hear it 👇",
+    "{day}: {matchup} {e} Quick poll while we wait 👇",
+    "Countdown's on ⏳ {matchup}, {day} at {time}. Vote below 👇",
+    "{e} {Matchup} is {day}! Settle this for me 👇",
+    "Getting ready for {day} {e} {matchup}. Your turn 👇",
+]
+PREVIEW_KINDS = ["result", "food", "players", "fun"]
+
+
+def build_preview_poll(game: dict, sport: dict, state: dict, roster: list | None = None, now=None, rng=random):
+    """Fun poll 2 days before a game. Rotates result → food → players → fun per sport."""
+    ctx = _ctx(game, sport)
+    cur = state.setdefault("preview_kind", {})
+    # each sport starts at a different poll type, so week one isn't all score predictions
+    i = cur.get(game["sport"], sum(map(ord, game["sport"])) % len(PREVIEW_KINDS) - 1)
+    for _ in range(len(PREVIEW_KINDS)):
+        i = (i + 1) % len(PREVIEW_KINDS)
+        kind = PREVIEW_KINDS[i]
+        if kind == "result":
+            qa = _result_poll(ctx, game, rng)
+        elif kind == "food":
+            qa = _food_poll(ctx, game, rng)
+        elif kind == "players":
+            qa = _player_poll(ctx, game, roster or [], rng)
+        else:
+            qa = _fun_poll(ctx, game, rng)
+        if qa:
+            break
+    cur[game["sport"]] = i
+    intro = PREVIEW_INTROS[_pick(f"{game['sport']}:preview_intro", len(PREVIEW_INTROS), state, rng)]
+    intro = intro.format(matchup=ctx["matchup"], Matchup=ctx["Matchup"], e=ctx["e"], day=ctx["day"], time=ctx["time"])
+    payload = _poll(qa[0], qa[1], _hours_until(game, now, after=0, default=48), intro=intro)
+    payload["_kind"] = kind  # for logs/preview only; stripped before sending
+    return payload
 
 
 def plain_text(payload: dict) -> str:
@@ -339,9 +425,5 @@ def plain_text(payload: dict) -> str:
         parts.append(f"[embed] {e.get('title', '')}")
         if e.get("description"):
             parts.append(e["description"])
-        for f in e.get("fields", []):
-            parts.append(f"  {f['name']}: {f['value']}")
-        if e.get("footer"):
-            parts.append(f"  — {e['footer']['text']}")
     text = "\n".join(parts)
     return re.sub(r"\n{3,}", "\n\n", text)

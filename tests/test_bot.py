@@ -41,7 +41,7 @@ def _fire_times(gs, start, end):
     t = start
     while t < end:
         for kind, g, mins in list(alerts.due_alerts(gs, t, sent)):
-            sent[f"{g['uid']}|{kind}"] = t.isoformat()
+            sent[alerts.sent_key(kind, g)] = t.isoformat()
             out.append((t, kind, g["opponent"], mins))
         t += timedelta(minutes=5)
     return out
@@ -62,7 +62,12 @@ def test_alert_schedule():
     # TBD game: morning only
     assert ("America East Quarterfinals", "away_morning") in by
     assert ("America East Quarterfinals", "away_live") not in by
-    assert len(fired) == 5  # nothing sent twice
+    # 2 days out: a fun poll at noon (UMBC Nov 3 → Nov 1; quarterfinal Nov 7 → Nov 5)
+    t, _ = by[("UMBC", "preview_poll")]
+    assert (t.month, t.day, t.hour) == (11, 1, 12)
+    assert by[("America East Quarterfinals", "preview_poll")][0].day == 5
+    assert len([f for f in fired if f[1] != "preview_poll"]) == 5  # nothing sent twice
+    assert len([f for f in fired if f[1] == "preview_poll"]) == 2
 
 
 def test_late_runner_still_sends_once():
@@ -134,7 +139,7 @@ def test_home_poll_is_valid_discord_poll():
     assert p["poll"]["duration"] == 12  # 6 PM start + 3h → open until ~9 PM
 
 
-def test_home_morning_posts_alert_then_poll():
+def test_zz_home_morning_posts_alert_then_poll():
     from datetime import datetime
     bryant = [x for x in games() if x["opponent"] == "Bryant"]
     sent_payloads = []
@@ -149,8 +154,64 @@ def test_every_template_renders_for_every_kind():
         for kind in messages.TEMPLATES:
             ctx = messages._ctx(g, SPORTS["mens-soccer"], 15)
             for t in messages.TEMPLATES[kind](ctx):
-                p = t()
-                text = messages.plain_text(p)
-                assert text and "{" not in text and len(text) < 1900
-                for e in p.get("embeds", []):
-                    assert len(e.get("title", "")) <= 256
+                text = t()
+                assert text and "{" not in text and "None" not in text and len(text) < 1900
+                assert "bot" not in text.lower()  # reads like a person wrote it
+
+
+def test_posts_come_from_you_not_a_bot():
+    from bot.sports import AVATAR_URL, DISPLAY_NAME
+    g = [x for x in games() if x["opponent"] == "Bryant"][0]
+    for p in (messages.build("home_morning", g, SPORTS["mens-soccer"], {}),
+              messages.build_poll(g, SPORTS["mens-soccer"], {}),
+              messages.build_preview_poll(g, SPORTS["mens-soccer"], {})):
+        assert p["username"] == DISPLAY_NAME and p.get("avatar_url") == AVATAR_URL
+        assert "embeds" not in p  # plain messages, no bot-style cards
+
+
+def test_roster_page_parsing():
+    from bot.schedule import extract_roster
+    r = extract_roster((Path(__file__).parent / "fixture_roster.html").read_text())
+    assert r[0] == {"name": "Samori McKell-Jeffers", "num": "1", "pos": "GK"}
+    assert [p["name"] for p in r] == ["Samori McKell-Jeffers", "Luan Lazoja", "Rodrigo Grenha", "Test Striker"]
+
+
+def test_preview_polls_rotate_and_are_valid():
+    from bot.schedule import extract_roster
+    roster = extract_roster((Path(__file__).parent / "fixture_roster.html").read_text())
+    state = {}
+    kinds = []
+    for g in games() * 3:
+        p = messages.build_preview_poll(g, SPORTS["mens-soccer"], state, roster=roster,
+                                        now=datetime(2026, 10, 28, 12, tzinfo=ET), rng=random.Random(len(kinds)))
+        kinds.append(p["_kind"])
+        poll = p["poll"]
+        assert p["content"] and "{" not in p["content"]
+        assert 0 < len(poll["question"]["text"]) <= 300 and "{" not in poll["question"]["text"]
+        assert 2 <= len(poll["answers"]) <= 10
+        assert all(0 < len(a["poll_media"]["text"]) <= 55 for a in poll["answers"])
+        assert 1 <= poll["duration"] <= 168
+        if p["_kind"] == "players":
+            names = " ".join(a["poll_media"]["text"] for a in poll["answers"])
+            assert "McKell-Jeffers" not in names or "standout" in poll["question"]["text"]  # keeper never a "scorer"
+    order = ["result", "food", "players", "fun"]
+    first = order.index(kinds[0])
+    assert kinds[:4] == [order[(first + i) % 4] for i in range(4)]  # changes every time, full rotation
+    # Bryant (Fri 6 PM) poll posted Wed noon stays open until kickoff
+    bryant = [x for x in games() if x["opponent"] == "Bryant"][0]
+    p = messages.build_preview_poll(bryant, SPORTS["mens-soccer"], {}, now=datetime(2026, 10, 28, 12, tzinfo=ET))
+    assert p["poll"]["duration"] == 54
+
+
+def test_no_roster_skips_player_polls():
+    g = [x for x in games() if x["opponent"] == "Bryant"][0]
+    state = {"preview_kind": {"mens-soccer": 1}}  # next up would be "players"
+    p = messages.build_preview_poll(g, SPORTS["mens-soccer"], state, roster=[])
+    assert p["_kind"] == "fun"
+
+
+def test_one_preview_poll_per_sport_per_day():
+    g1 = [x for x in games() if x["opponent"] == "UMBC"][0]
+    g2 = dict(g1, uid="mens-soccer:dh2", opponent="UMBC (DH)")
+    due = [k for k, *_ in alerts.due_alerts([g1, g2], datetime(2026, 11, 1, 12, tzinfo=ET), {})]
+    assert due.count("preview_poll") == 1
