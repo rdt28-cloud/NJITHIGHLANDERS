@@ -5,10 +5,10 @@ secret (see README). A sport with no webhook is still tracked, just never posted
 `role_id` is that sport's "<Sport> Fans" Discord role; game-day alerts @mention it.
 """
 
-# Posts appear under this name and picture, so they read like you wrote them.
+# Posts appear under this name and picture (the server's NJIT logo).
 # (Discord still shows a small "APP" tag on webhook posts; that can't be turned off.)
-DISPLAY_NAME = "Ron"
-AVATAR_URL = "https://cdn.discordapp.com/avatars/1165235043363459072/157e517cdbf371a47aaead44675714a3.png?size=256"
+DISPLAY_NAME = "The Highlander"
+AVATAR_URL = "https://cdn.discordapp.com/icons/1560306769497030767/9e41cc9d3c05625efec88ea0d5f8dd55.png?size=256"
 
 ESPN_PLUS_URL = "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
 SITE = "https://njithighlanders.com"

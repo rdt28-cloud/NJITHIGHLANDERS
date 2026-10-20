@@ -12,8 +12,8 @@ sport's own channel:
 * **2-days-out polls rotate** every time: result predictions → game-day food →
   pick a player (real names from the team's roster) → other fun fan questions.
   One poll per sport per day, and it closes when the game starts.
-* Posts appear under **your name and picture** (`DISPLAY_NAME` / `AVATAR_URL` in
-  `bot/sports.py`) and are written casually, like you typed them. Discord still shows
+* Posts appear as **The Highlander** with the NJIT logo (`DISPLAY_NAME` / `AVATAR_URL` in
+  `bot/sports.py`) and are written casually, like a person typed them. Discord still shows
   a small "APP" tag on them; that can't be turned off.
 * Games with a **TBA/TBD** time get the morning post (and the 2-day poll) only.
 * Every post type has several formats and never reuses a recent one for the same sport.
