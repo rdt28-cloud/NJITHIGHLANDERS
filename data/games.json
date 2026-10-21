@@ -1,62 +1,6 @@
 {
-  "updated": "2026-10-20T06:39:19-04:00",
+  "updated": "2026-10-21T06:42:40-04:00",
   "games": [
-    {
-      "uid": "mens-basketball:11546",
-      "sport": "mens-basketball",
-      "opponent": "American (Exh.)",
-      "where": "home",
-      "date": "2026-10-18",
-      "start": "2026-10-18T11:30:00-04:00",
-      "time_text": "11:30am",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-basketball/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-basketball/schedule"
-    },
-    {
-      "uid": "womens-soccer:11458",
-      "sport": "womens-soccer",
-      "opponent": "Vermont",
-      "where": "home",
-      "date": "2026-10-18",
-      "start": "2026-10-18T14:00:00-04:00",
-      "time_text": "2pm",
-      "location": "Newark, NJ Lubetkin Field at Mal Simon Stadium",
-      "venue": "Lubetkin Field at Mal Simon Stadium",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-soccer/schedule"
-    },
-    {
-      "uid": "ice-hockey:11705",
-      "sport": "ice-hockey",
-      "opponent": "Rutgers",
-      "where": "home",
-      "date": "2026-10-18",
-      "start": "2026-10-18T20:30:00-04:00",
-      "time_text": "8:30 PM",
-      "location": "Newark, NJ RWJ Barnabas Hockey House",
-      "venue": "RWJ Barnabas Hockey House",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
-    },
     {
       "uid": "womens-soccer:11459",
       "sport": "womens-soccer",
@@ -70,9 +14,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-soccer/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/de685e71-5332-4e84-a228-9dfc70c01e3a"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-soccer/schedule"
     },
