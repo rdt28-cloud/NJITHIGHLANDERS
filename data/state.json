@@ -4,13 +4,19 @@
     "preview|womens-volleyball|2026-10-23": "2026-10-21T12:06:20.592264-04:00",
     "preview|mens-tennis|2026-10-23": "2026-10-21T12:06:20.592264-04:00",
     "preview|womens-tennis|2026-10-23": "2026-10-21T12:06:20.592264-04:00",
-    "womens-soccer:11459|away_morning": "2026-10-22T09:08:33.128989-04:00"
+    "womens-soccer:11459|away_morning": "2026-10-22T09:08:33.128989-04:00",
+    "preview|mens-soccer|2026-10-24": "2026-10-22T12:34:18.359473-04:00",
+    "preview|ice-hockey|2026-10-24": "2026-10-22T12:34:18.359473-04:00",
+    "preview|fencing|2026-10-24": "2026-10-22T12:34:18.359473-04:00"
   },
   "preview_kind": {
     "womens-soccer": 1,
     "womens-volleyball": 0,
     "mens-tennis": 1,
-    "womens-tennis": 3
+    "womens-tennis": 3,
+    "mens-soccer": 3,
+    "ice-hockey": 1,
+    "fencing": 2
   },
   "recent": {
     "womens-soccer:preview_intro": [
@@ -27,6 +33,15 @@
     ],
     "womens-soccer:away_morning": [
       5
+    ],
+    "mens-soccer:preview_intro": [
+      4
+    ],
+    "ice-hockey:preview_intro": [
+      2
+    ],
+    "fencing:preview_intro": [
+      2
     ]
   }
 }
