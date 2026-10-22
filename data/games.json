@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-21T06:42:40-04:00",
+  "updated": "2026-10-22T06:42:11-04:00",
   "games": [
     {
       "uid": "womens-soccer:11459",
@@ -88,9 +88,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-soccer/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/706a21e4-5311-486c-a31e-34037b3dea96#bucketId=2"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
@@ -114,7 +113,7 @@
       "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
     },
     {
-      "uid": "fencing:11659",
+      "uid": "fencing:11671",
       "sport": "fencing",
       "opponent": "Nikki Franke Open",
       "where": "away",
@@ -127,10 +126,10 @@
       "promo": null,
       "stream": {
         "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-fencing/schedule",
+        "url": "https://njithighlanders.com/sports/womens-fencing/schedule",
         "unconfirmed": true
       },
-      "schedule_url": "https://njithighlanders.com/sports/mens-fencing/schedule"
+      "schedule_url": "https://njithighlanders.com/sports/womens-fencing/schedule"
     },
     {
       "uid": "womens-soccer:11460",
@@ -168,6 +167,25 @@
         "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
+    },
+    {
+      "uid": "fencing:11659",
+      "sport": "fencing",
+      "opponent": "Nikki Franke Open",
+      "where": "away",
+      "date": "2026-10-25",
+      "start": null,
+      "time_text": "TBA",
+      "location": "Philadelphia, PA",
+      "venue": "Philadelphia, PA",
+      "tournament": false,
+      "promo": null,
+      "stream": {
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/mens-fencing/schedule",
+        "unconfirmed": true
+      },
+      "schedule_url": "https://njithighlanders.com/sports/mens-fencing/schedule"
     },
     {
       "uid": "womens-cross-country:11496",
@@ -2193,8 +2211,8 @@
       "opponent": "UAlbany",
       "where": "away",
       "date": "2027-02-04",
-      "start": null,
-      "time_text": "TBD",
+      "start": "2027-02-04T18:30:00-05:00",
+      "time_text": "6:30 PM",
       "location": "Albany, NY",
       "venue": "Albany, NY",
       "tournament": false,
