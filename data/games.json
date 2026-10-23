@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T06:42:11-04:00",
+  "updated": "2026-10-23T06:40:31-04:00",
   "games": [
     {
       "uid": "womens-soccer:11459",
@@ -14,8 +14,9 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/de685e71-5332-4e84-a228-9dfc70c01e3a"
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/womens-soccer/schedule",
+        "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-soccer/schedule"
     },
