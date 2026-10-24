@@ -15,7 +15,10 @@
     "preview|womens-soccer|2026-10-25": "2026-10-23T12:17:43.326851-04:00",
     "preview|ice-hockey|2026-10-25": "2026-10-23T12:17:43.326851-04:00",
     "preview|fencing|2026-10-25": "2026-10-23T12:17:43.326851-04:00",
-    "womens-volleyball:11519|away_live": "2026-10-23T18:13:48.555554-04:00"
+    "womens-volleyball:11519|away_live": "2026-10-23T18:13:48.555554-04:00",
+    "mens-soccer:11478|away_morning": "2026-10-24T09:27:41.841674-04:00",
+    "ice-hockey:11706|away_morning": "2026-10-24T09:27:41.841674-04:00",
+    "fencing:11671|away_morning": "2026-10-24T09:27:41.841674-04:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -68,6 +71,15 @@
     ],
     "womens-volleyball:away_live": [
       4
+    ],
+    "mens-soccer:away_morning": [
+      5
+    ],
+    "ice-hockey:away_morning": [
+      4
+    ],
+    "fencing:away_morning": [
+      0
     ]
   }
 }
