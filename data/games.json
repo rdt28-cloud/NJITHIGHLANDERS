@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23T06:40:31-04:00",
+  "updated": "2026-10-24T06:35:43-04:00",
   "games": [
     {
       "uid": "womens-soccer:11459",
@@ -33,8 +33,9 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "America East Live",
-        "url": "https://americaeast.com/watch/default.aspx?Live=18314&path=conf"
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/womens-volleyball/schedule",
+        "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-volleyball/schedule"
     },
