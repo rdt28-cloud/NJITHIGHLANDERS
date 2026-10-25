@@ -1,25 +1,6 @@
 {
-  "updated": "2026-10-24T06:35:43-04:00",
+  "updated": "2026-10-25T06:35:33-04:00",
   "games": [
-    {
-      "uid": "womens-soccer:11459",
-      "sport": "womens-soccer",
-      "opponent": "Binghamton",
-      "where": "away",
-      "date": "2026-10-22",
-      "start": "2026-10-22T16:00:00-04:00",
-      "time_text": "4pm",
-      "location": "Vestal, NY",
-      "venue": "Vestal, NY",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-soccer/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-soccer/schedule"
-    },
     {
       "uid": "womens-volleyball:11519",
       "sport": "womens-volleyball",
@@ -91,7 +72,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/706a21e4-5311-486c-a31e-34037b3dea96#bucketId=2"
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
@@ -147,7 +128,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "url": "https://www.espn.com/watch/player/_/eventCalendarId/401887276?gameId=401887276&sourceLang=en&om-navmethod=espn%3Aglobalsearch%3Aresults"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-soccer/schedule"
     },
