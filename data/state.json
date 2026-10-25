@@ -24,7 +24,8 @@
     "womens-soccer:11460|home_morning": "2026-10-25T09:32:39.178295-04:00",
     "ice-hockey:11707|home_morning": "2026-10-25T09:32:39.178295-04:00",
     "fencing:11659|away_morning": "2026-10-25T09:32:39.178295-04:00",
-    "womens-soccer:11460|home_pullup": "2026-10-25T12:47:04.580209-04:00"
+    "womens-soccer:11460|home_pullup": "2026-10-25T12:47:04.580209-04:00",
+    "ice-hockey:11707|home_pullup": "2026-10-25T17:08:03.706950-04:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -108,6 +109,9 @@
     ],
     "womens-soccer:home_pullup": [
       5
+    ],
+    "ice-hockey:home_pullup": [
+      4
     ]
   }
 }
