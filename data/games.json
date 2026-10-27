@@ -1,62 +1,6 @@
 {
-  "updated": "2026-10-26T06:47:53-04:00",
+  "updated": "2026-10-27T06:45:19-04:00",
   "games": [
-    {
-      "uid": "mens-soccer:11478",
-      "sport": "mens-soccer",
-      "opponent": "UMass Lowell",
-      "where": "away",
-      "date": "2026-10-24",
-      "start": "2026-10-24T18:00:00-04:00",
-      "time_text": "6pm",
-      "location": "Lowell, MA",
-      "venue": "Lowell, MA",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
-    },
-    {
-      "uid": "ice-hockey:11706",
-      "sport": "ice-hockey",
-      "opponent": "TCNJ",
-      "where": "away",
-      "date": "2026-10-24",
-      "start": "2026-10-24T20:30:00-04:00",
-      "time_text": "8:30 PM",
-      "location": "TSAI Field House",
-      "venue": "TSAI Field House",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
-    },
-    {
-      "uid": "fencing:11671",
-      "sport": "fencing",
-      "opponent": "Nikki Franke Open",
-      "where": "away",
-      "date": "2026-10-24",
-      "start": null,
-      "time_text": "TBA",
-      "location": "Philadelphia, PA",
-      "venue": "Philadelphia, PA",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-fencing/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-fencing/schedule"
-    },
     {
       "uid": "womens-soccer:11460",
       "sport": "womens-soccer",
@@ -183,7 +127,7 @@
       "promo": "Senior Night",
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "url": "https://www.espn.com/watch/player/_/id/4e649d74-b1e5-4ea1-a967-0a5541b525a5"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
@@ -238,8 +182,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "name": "America East Live",
+        "url": "https://americaeast.com/watch/default.aspx?Live=18110&path=conf"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-volleyball/schedule"
     },
@@ -265,7 +209,7 @@
     {
       "uid": "fencing:11660",
       "sport": "fencing",
-      "opponent": "NJIT Invitational",
+      "opponent": "NJIT Invitational (Hunter/Drew)",
       "where": "home",
       "date": "2026-11-01",
       "start": null,
@@ -295,7 +239,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "url": "https://www.espn.com/watch/player/_/id/23b79428-b15e-426e-bdad-d7d1a2e65d38"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -336,6 +280,24 @@
         "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
+    },
+    {
+      "uid": "womens-basketball:11564",
+      "sport": "womens-basketball",
+      "opponent": "Merrimack",
+      "where": "home",
+      "date": "2026-11-05",
+      "start": "2026-11-05T18:00:00-05:00",
+      "time_text": "6pm",
+      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
+      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
+      "tournament": true,
+      "promo": "America East-Metro Challenge",
+      "stream": {
+        "name": "ESPN+",
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+      },
+      "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
     {
       "uid": "mens-basketball:11548",
@@ -392,24 +354,6 @@
         "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-tennis/schedule"
-    },
-    {
-      "uid": "womens-basketball:11564",
-      "sport": "womens-basketball",
-      "opponent": "Merrimack",
-      "where": "home",
-      "date": "2026-11-05",
-      "start": null,
-      "time_text": "TBD",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": true,
-      "promo": "America East-Metro Challenge",
-      "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
     {
       "uid": "mens-tennis:11584",
@@ -689,8 +633,8 @@
       "tournament": false,
       "promo": "Senior Night",
       "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "name": "America East Live",
+        "url": "https://americaeast.com/watch/default.aspx?Live=18111&path=conf"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-volleyball/schedule"
     },
