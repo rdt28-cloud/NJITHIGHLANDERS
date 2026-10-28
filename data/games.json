@@ -1,84 +1,9 @@
 {
-  "updated": "2026-10-27T06:45:19-04:00",
+  "updated": "2026-10-28T06:52:45-04:00",
   "games": [
-    {
-      "uid": "womens-soccer:11460",
-      "sport": "womens-soccer",
-      "opponent": "UMass Lowell",
-      "where": "home",
-      "date": "2026-10-25",
-      "start": "2026-10-25T13:00:00-04:00",
-      "time_text": "1pm",
-      "location": "Newark, NJ Lubetkin Field at Mal Simon Stadium",
-      "venue": "Lubetkin Field at Mal Simon Stadium",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-soccer/schedule"
-    },
-    {
-      "uid": "ice-hockey:11707",
-      "sport": "ice-hockey",
-      "opponent": "TCNJ",
-      "where": "home",
-      "date": "2026-10-25",
-      "start": "2026-10-25T17:30:00-04:00",
-      "time_text": "5:30 PM",
-      "location": "Newark, NJ RWJ Barnabas Hockey House",
-      "venue": "RWJ Barnabas Hockey House",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
-    },
-    {
-      "uid": "fencing:11659",
-      "sport": "fencing",
-      "opponent": "Nikki Franke Open",
-      "where": "away",
-      "date": "2026-10-25",
-      "start": null,
-      "time_text": "TBA",
-      "location": "Philadelphia, PA",
-      "venue": "Philadelphia, PA",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-fencing/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-fencing/schedule"
-    },
     {
       "uid": "womens-cross-country:11496",
       "sport": "womens-cross-country",
-      "opponent": "America East Conference Championships",
-      "where": "away",
-      "date": "2026-10-30",
-      "start": "2026-10-30T10:00:00-04:00",
-      "time_text": "10am",
-      "location": "Albany, NY",
-      "venue": "Albany, NY",
-      "tournament": true,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-cross-country/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-cross-country/schedule"
-    },
-    {
-      "uid": "mens-cross-country:11487",
-      "sport": "mens-cross-country",
       "opponent": "America East Conference Championships",
       "where": "away",
       "date": "2026-10-30",
@@ -89,9 +14,26 @@
       "tournament": true,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-cross-country/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/220ec538-5af5-4088-8278-af5d4c1e66af"
+      },
+      "schedule_url": "https://njithighlanders.com/sports/womens-cross-country/schedule"
+    },
+    {
+      "uid": "mens-cross-country:11487",
+      "sport": "mens-cross-country",
+      "opponent": "America East Conference Championships",
+      "where": "away",
+      "date": "2026-10-30",
+      "start": "2026-10-30T12:00:00-04:00",
+      "time_text": "12pm",
+      "location": "Albany, NY",
+      "venue": "Albany, NY",
+      "tournament": true,
+      "promo": null,
+      "stream": {
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/220ec538-5af5-4088-8278-af5d4c1e66af"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-cross-country/schedule"
     },
@@ -144,9 +86,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/764511ce-c33b-408b-86a6-5ed3ff5073a2#bucketId=8456"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule"
     },
@@ -256,9 +197,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-basketball/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/38950ba1-594a-486a-a53c-044076da8a09"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-basketball/schedule"
     },
@@ -313,7 +253,7 @@
       "promo": "America East-Metro Challenge",
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "url": "https://www.espn.com/watch/player/_/id/1f933379-b5e0-4c5d-9913-192de1927977"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-basketball/schedule"
     },

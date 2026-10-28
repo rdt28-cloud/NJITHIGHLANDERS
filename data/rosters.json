@@ -1,1871 +1,1871 @@
 {
- "updated": "2026-10-20T15:07:03-04:00",
- "rosters": {
-  "mens-baseball": [
-   {
-    "name": "Cameron Boardman",
-    "num": "1",
-    "pos": "C"
-   },
-   {
-    "name": "Jack Stead",
-    "num": "2",
-    "pos": "INF"
-   },
-   {
-    "name": "Ethan Schmutz",
-    "num": "3",
-    "pos": "INF"
-   },
-   {
-    "name": "Ben Robinson",
-    "num": "4",
-    "pos": "INF"
-   },
-   {
-    "name": "Trent MacDougall",
-    "num": "5",
-    "pos": "OF"
-   },
-   {
-    "name": "Bennett Siegel",
-    "num": "7",
-    "pos": "OF"
-   },
-   {
-    "name": "Andrew Hart",
-    "num": "8",
-    "pos": "OF"
-   },
-   {
-    "name": "Jake Meyers",
-    "num": "10",
-    "pos": "OF"
-   },
-   {
-    "name": "Aaron Wojenski",
-    "num": "11",
-    "pos": "INF"
-   },
-   {
-    "name": "Tyler Skaggs",
-    "num": "14",
-    "pos": "C"
-   },
-   {
-    "name": "Brandon Falco",
-    "num": "15",
-    "pos": "RHP"
-   },
-   {
-    "name": "Conner DeLauzon",
-    "num": "16",
-    "pos": "OF"
-   },
-   {
-    "name": "Walddy Rodriguez",
-    "num": "18",
-    "pos": "INF"
-   },
-   {
-    "name": "DJ Lloyd",
-    "num": "19",
-    "pos": "C"
-   },
-   {
-    "name": "Anthony Catalano",
-    "num": "21",
-    "pos": "RHP"
-   },
-   {
-    "name": "Omar Carreras",
-    "num": "23",
-    "pos": "INF"
-   },
-   {
-    "name": "Matt Graziose",
-    "num": "24",
-    "pos": "INF"
-   },
-   {
-    "name": "Alberto Santos IV",
-    "num": "25",
-    "pos": "RHP"
-   },
-   {
-    "name": "CJ Wisniewski",
-    "num": "26",
-    "pos": "OF"
-   },
-   {
-    "name": "Becker Sybirski",
-    "num": "27",
-    "pos": "RHP"
-   },
-   {
-    "name": "Tyler Huzzy",
-    "num": "29",
-    "pos": "C"
-   },
-   {
-    "name": "Colin Kidd",
-    "num": "30",
-    "pos": "RHP"
-   },
-   {
-    "name": "Dylan Zammit",
-    "num": "31",
-    "pos": "RHP"
-   },
-   {
-    "name": "Eddie Werse",
-    "num": "32",
-    "pos": "LHP"
-   },
-   {
-    "name": "Conner Rippo",
-    "num": "34",
-    "pos": "P/OF"
-   },
-   {
-    "name": "Braydan Urban",
-    "num": "35",
-    "pos": "RHP"
-   },
-   {
-    "name": "Kam Street",
-    "num": "42",
-    "pos": "RHP"
-   },
-   {
-    "name": "Anthony Anzaldi",
-    "num": "43",
-    "pos": "LHP"
-   },
-   {
-    "name": "Greg Nascimento",
-    "num": "44",
-    "pos": "RHP"
-   },
-   {
-    "name": "Tade Riordan",
-    "num": "48",
-    "pos": "RHP"
-   },
-   {
-    "name": "Everett Bertsch",
-    "num": "49",
-    "pos": "RHP"
-   },
-   {
-    "name": "Aidan Lenzen",
-    "num": "50",
-    "pos": "RHP"
-   },
-   {
-    "name": "Samuel Gil",
-    "num": "52",
-    "pos": "RHP"
-   },
-   {
-    "name": "Hayden Estes",
-    "num": "55",
-    "pos": "RHP"
-   }
-  ],
-  "mens-basketball": [
-   {
-    "name": "Jayonni Durrough",
-    "num": "0",
-    "pos": ""
-   },
-   {
-    "name": "David Bolden",
-    "num": "1",
-    "pos": ""
-   },
-   {
-    "name": "Mario Tatum Jr.",
-    "num": "2",
-    "pos": ""
-   },
-   {
-    "name": "AJ Altobelli",
-    "num": "5",
-    "pos": ""
-   },
-   {
-    "name": "Victor Vanderstraeten",
-    "num": "6",
-    "pos": ""
-   },
-   {
-    "name": "Mathéo Coffi",
-    "num": "10",
-    "pos": ""
-   },
-   {
-    "name": "Brandon Stores Jr.",
-    "num": "12",
-    "pos": ""
-   },
-   {
-    "name": "Stefan Jimenez-Vojnic",
-    "num": "13",
-    "pos": ""
-   },
-   {
-    "name": "Quentin Duncan",
-    "num": "14",
-    "pos": ""
-   },
-   {
-    "name": "Brendan Oliver",
-    "num": "22",
-    "pos": ""
-   },
-   {
-    "name": "John Kelly",
-    "num": "25",
-    "pos": ""
-   },
-   {
-    "name": "Zack Scherler",
-    "num": "33",
-    "pos": ""
-   },
-   {
-    "name": "Rocco Awad",
-    "num": "44",
-    "pos": ""
-   }
-  ],
-  "mens-soccer": [
-   {
-    "name": "Samori McKell-Jeffers",
-    "num": "1",
-    "pos": "GK"
-   },
-   {
-    "name": "Luan Lazoja",
-    "num": "2",
-    "pos": "D"
-   },
-   {
-    "name": "Rodrigo Grenha",
-    "num": "3",
-    "pos": "D"
-   },
-   {
-    "name": "Eric Sadlocha",
-    "num": "4",
-    "pos": "D"
-   },
-   {
-    "name": "Patrick Kierzkowski",
-    "num": "5",
-    "pos": "D"
-   },
-   {
-    "name": "Hugo Tavares",
-    "num": "6",
-    "pos": "MF"
-   },
-   {
-    "name": "Jaime Barbero",
-    "num": "7",
-    "pos": "F"
-   },
-   {
-    "name": "Maximus Barboto",
-    "num": "8",
-    "pos": "MF"
-   },
-   {
-    "name": "Sebastian Sunol",
-    "num": "9",
-    "pos": "F"
-   },
-   {
-    "name": "Diogo Rebelo",
-    "num": "10",
-    "pos": "MF"
-   },
-   {
-    "name": "Jeremy Klinger",
-    "num": "11",
-    "pos": "F"
-   },
-   {
-    "name": "Ander Del Castillo",
-    "num": "12",
-    "pos": "F"
-   },
-   {
-    "name": "Riley Davis",
-    "num": "13",
-    "pos": "D"
-   },
-   {
-    "name": "Parker Brennan",
-    "num": "15",
-    "pos": "F"
-   },
-   {
-    "name": "Alfonso Borbon",
-    "num": "16",
-    "pos": "F"
-   },
-   {
-    "name": "Stefan Lichtenheim",
-    "num": "17",
-    "pos": "MF"
-   },
-   {
-    "name": "Mateusz Marciniak",
-    "num": "18",
-    "pos": "F"
-   },
-   {
-    "name": "Itay Soffer",
-    "num": "19",
-    "pos": "MF"
-   },
-   {
-    "name": "Henrique Sardinha",
-    "num": "20",
-    "pos": "MF"
-   },
-   {
-    "name": "Harusumi Takesada",
-    "num": "21",
-    "pos": "MF"
-   },
-   {
-    "name": "Daniel Tavares",
-    "num": "22",
-    "pos": "MF"
-   },
-   {
-    "name": "Jake Rubis",
-    "num": "23",
-    "pos": "MF"
-   },
-   {
-    "name": "Junee Lee",
-    "num": "24",
-    "pos": "D/F"
-   },
-   {
-    "name": "Telmo Vila",
-    "num": "25",
-    "pos": "F"
-   },
-   {
-    "name": "Tristan Barboto",
-    "num": "26",
-    "pos": "D"
-   },
-   {
-    "name": "Zain Thompson",
-    "num": "27",
-    "pos": "F"
-   },
-   {
-    "name": "Emil Aumann",
-    "num": "30",
-    "pos": "GK"
-   },
-   {
-    "name": "Andre Faerman",
-    "num": "32",
-    "pos": "GK"
-   }
-  ],
-  "mens-cross-country": [
-   {
-    "name": "Lasse Bjørn Jensen",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Judah Garcia Phillips",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Himien Jones",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Ryan Lang",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Noel Madda",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Elijah McCoy",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Erik Preisner",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Diego Reyes",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Daniel Wilson",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Isaac Yudkovsky",
-    "num": "",
-    "pos": ""
-   }
-  ],
-  "mens-lacrosse": [
-   {
-    "name": "Dylan Sebastian",
-    "num": "1",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Carson Piscitiello",
-    "num": "2",
-    "pos": "Attack"
-   },
-   {
-    "name": "Christopher Eiselein",
-    "num": "3",
-    "pos": "Midfield"
-   },
-   {
-    "name": "JC Echezuria IV",
-    "num": "4",
-    "pos": "Attack"
-   },
-   {
-    "name": "Dylan Kaelin Panico",
-    "num": "5",
-    "pos": "Defense"
-   },
-   {
-    "name": "Bodhi Lyon",
-    "num": "6",
-    "pos": "Goalkeeper"
-   },
-   {
-    "name": "Nate Ryan",
-    "num": "7",
-    "pos": "Defense"
-   },
-   {
-    "name": "Blake Piscitiello",
-    "num": "8",
-    "pos": "Attack"
-   },
-   {
-    "name": "Kelly Jackson",
-    "num": "9",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Eoin Power",
-    "num": "10",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Jack Wade",
-    "num": "11",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Frankie Semiraglio",
-    "num": "12",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Janyk Krisulevicz",
-    "num": "13",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Mike Bratus",
-    "num": "14",
-    "pos": "Defense"
-   },
-   {
-    "name": "Ryan Sininsky",
-    "num": "15",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Evan Schmitt",
-    "num": "17",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Jackson Foley",
-    "num": "18",
-    "pos": "Defense"
-   },
-   {
-    "name": "Walker Zabransky",
-    "num": "19",
-    "pos": "Defense"
-   },
-   {
-    "name": "Patrick Loxley",
-    "num": "21",
-    "pos": "Goalkeeper"
-   },
-   {
-    "name": "Carson Bowley",
-    "num": "22",
-    "pos": "Attack"
-   },
-   {
-    "name": "Brendan Stanislav",
-    "num": "24",
-    "pos": "Defense"
-   },
-   {
-    "name": "Michael Flaccavento",
-    "num": "25",
-    "pos": "Defense"
-   },
-   {
-    "name": "Mason Bryan",
-    "num": "27",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Tristan Harrison",
-    "num": "28",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Colin Lowe",
-    "num": "29",
-    "pos": "Defense"
-   },
-   {
-    "name": "Emmerick Dopona",
-    "num": "31",
-    "pos": "Defense"
-   },
-   {
-    "name": "Wade Meissner",
-    "num": "32",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Austin Exley",
-    "num": "33",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Will Corry",
-    "num": "34",
-    "pos": "Attack"
-   },
-   {
-    "name": "Connor Mumford",
-    "num": "40",
-    "pos": "Faceoff"
-   },
-   {
-    "name": "Michael Gaffney",
-    "num": "41",
-    "pos": "Faceoff"
-   },
-   {
-    "name": "Evan Lastella",
-    "num": "42",
-    "pos": "Defense"
-   },
-   {
-    "name": "Austin Hahn",
-    "num": "44",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Jake Apel",
-    "num": "45",
-    "pos": "Attack"
-   },
-   {
-    "name": "Sullivan O'Brien",
-    "num": "55",
-    "pos": "Defense"
-   },
-   {
-    "name": "Wyatt Viste",
-    "num": "66",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Daniel Wahn",
-    "num": "77",
-    "pos": "Defense"
-   },
-   {
-    "name": "Nirio Garcia",
-    "num": "88",
-    "pos": "Faceoff"
-   },
-   {
-    "name": "Brayden Haase",
-    "num": "91",
-    "pos": "Midfield"
-   },
-   {
-    "name": "Cameron Kurdyla",
-    "num": "99",
-    "pos": "Goalkeeper"
-   }
-  ],
-  "mens-swimming-diving": [
-   {
-    "name": "Spencer Swanholm",
-    "num": "",
-    "pos": "Distance/Free"
-   },
-   {
-    "name": "Yonatan Ahdut",
-    "num": "",
-    "pos": "Free/IM"
-   },
-   {
-    "name": "Luca Angelini",
-    "num": "",
-    "pos": "Sprint/Free"
-   },
-   {
-    "name": "Bartosz Bryg",
-    "num": "",
-    "pos": "Breast/IM"
-   },
-   {
-    "name": "Andrew Cellar",
-    "num": "",
-    "pos": "Back"
-   },
-   {
-    "name": "Vincent Coppola",
-    "num": "",
-    "pos": "IM/Free"
-   },
-   {
-    "name": "Ian Dinesh",
-    "num": "",
-    "pos": "Breast"
-   },
-   {
-    "name": "Beckham DiPierro",
-    "num": "",
-    "pos": "Dive"
-   },
-   {
-    "name": "Pawel Drzymala",
-    "num": "",
-    "pos": "Fly/IM"
-   },
-   {
-    "name": "Borys Endlé",
-    "num": "",
-    "pos": "IM/Breast"
-   },
-   {
-    "name": "RJ Farina",
-    "num": "",
-    "pos": "Free/IM/Breast"
-   },
-   {
-    "name": "Walker Frey",
-    "num": "",
-    "pos": "Dive"
-   },
-   {
-    "name": "Vittorio Giambelli",
-    "num": "",
-    "pos": "Fly"
-   },
-   {
-    "name": "Ryan Hause",
-    "num": "",
-    "pos": "Fly/Back/IM"
-   },
-   {
-    "name": "Justin Jarczynski",
-    "num": "",
-    "pos": "Distance/Free"
-   },
-   {
-    "name": "Jamar Josephs",
-    "num": "",
-    "pos": "Free/Fly"
-   },
-   {
-    "name": "Sam Lorenc",
-    "num": "",
-    "pos": "Free/Fly/IM"
-   },
-   {
-    "name": "Aiden Nugent",
-    "num": "",
-    "pos": "Distance/Free"
-   },
-   {
-    "name": "Edward Ormsby",
-    "num": "",
-    "pos": "IM"
-   },
-   {
-    "name": "Matthew Piacentini",
-    "num": "",
-    "pos": "Fly/Free"
-   },
-   {
-    "name": "Rehman Tariq",
-    "num": "",
-    "pos": "Fly/Stroke"
-   },
-   {
-    "name": "Mohamed Walid",
-    "num": "",
-    "pos": "Fly"
-   }
-  ],
-  "mens-track-field": [
-   {
-    "name": "Moustafa Abdelaal",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Osei Akuamoah-Boateng",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Jason Alvarez",
-    "num": "",
-    "pos": "H"
-   },
-   {
-    "name": "Ralu Anosike",
-    "num": "",
-    "pos": "J"
-   },
-   {
-    "name": "Jason Ballen",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Marvellous Bassey",
-    "num": "",
-    "pos": "J"
-   },
-   {
-    "name": "Lasse Bjørn Jensen",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "Eatoniel Brown",
-    "num": "",
-    "pos": "H"
-   },
-   {
-    "name": "Elisha Bugasch",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Gianni Campione",
-    "num": "",
-    "pos": "J"
-   },
-   {
-    "name": "Pietro Carpentari",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Devran Dikmen",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Davin Duffy",
-    "num": "",
-    "pos": "MD"
-   },
-   {
-    "name": "Caleb Duvelson",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Anthony Dvorsky",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "James Estafanous",
-    "num": "",
-    "pos": "MD"
-   },
-   {
-    "name": "Lossenie Fofana",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Judah Garcia Phillips",
-    "num": "",
-    "pos": "MD"
-   },
-   {
-    "name": "Aidan Groff",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "Jake Hancox",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Jaeden Henry",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Fabian Herrera",
-    "num": "",
-    "pos": "MD"
-   },
-   {
-    "name": "Cassian Holland-Moritz",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Nate Homefield",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Jeusten Jourdain",
-    "num": "",
-    "pos": "S/H"
-   },
-   {
-    "name": "Trotman Kertes",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Ryan Lang",
-    "num": "",
-    "pos": "MD"
-   },
-   {
-    "name": "Matin Mahmoud",
-    "num": "",
-    "pos": "J"
-   },
-   {
-    "name": "William Mitchell",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Ryan Nartey",
-    "num": "",
-    "pos": "J"
-   },
-   {
-    "name": "Prince Ossy",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Tyler Passmore",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Diego Reyes",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "Andrew Sabeh",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Jayden Smith",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Robbie Tormo",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Justin Villamizar",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Daniel Wilson",
-    "num": "",
-    "pos": "MD"
-   }
-  ],
-  "mens-tennis": [
-   {
-    "name": "Arijan Kaliterna",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Yerassyl Bakhtiyar",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Riccardo Campagnola",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Juan Diego Argenal",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Soma Fukuhara",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Francisco Guimaraes",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Maxime Hankins",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Severin Risan",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Tom Sorin",
-    "num": "",
-    "pos": ""
-   }
-  ],
-  "mens-volleyball": [
-   {
-    "name": "Harrison Girard",
-    "num": "1",
-    "pos": "OH"
-   },
-   {
-    "name": "Andre Aleixo",
-    "num": "2",
-    "pos": "OH"
-   },
-   {
-    "name": "Bruno Figueiredo",
-    "num": "3",
-    "pos": "S"
-   },
-   {
-    "name": "Adam Uryniuk",
-    "num": "4",
-    "pos": "S"
-   },
-   {
-    "name": "Daniel Latkowski",
-    "num": "5",
-    "pos": "MB"
-   },
-   {
-    "name": "Leo Fontaine",
-    "num": "7",
-    "pos": "OH"
-   },
-   {
-    "name": "Parker Moorhead",
-    "num": "8",
-    "pos": "OH"
-   },
-   {
-    "name": "Diego Lopez",
-    "num": "9",
-    "pos": "OH"
-   },
-   {
-    "name": "Ian Nguyen",
-    "num": "11",
-    "pos": "OH"
-   },
-   {
-    "name": "Alex Heins",
-    "num": "12",
-    "pos": "MB"
-   },
-   {
-    "name": "Philip Hanna",
-    "num": "13",
-    "pos": "MB"
-   },
-   {
-    "name": "Gustavo Chrcanovic",
-    "num": "14",
-    "pos": "OH"
-   },
-   {
-    "name": "Ron Tidhar",
-    "num": "15",
-    "pos": "L"
-   },
-   {
-    "name": "Brody Stuttgen",
-    "num": "16",
-    "pos": "S"
-   },
-   {
-    "name": "Arkaidiy Rivkin",
-    "num": "17",
-    "pos": "RS/OPP"
-   },
-   {
-    "name": "Wiktor Nowak",
-    "num": "19",
-    "pos": "OPP"
-   }
-  ],
-  "womens-basketball": [
-   {
-    "name": "Kate Donovan",
-    "num": "2",
-    "pos": "G"
-   },
-   {
-    "name": "Allison Cannon",
-    "num": "3",
-    "pos": "G"
-   },
-   {
-    "name": "Marina Bravo",
-    "num": "4",
-    "pos": "F"
-   },
-   {
-    "name": "Mia Gestosani",
-    "num": "8",
-    "pos": "G"
-   },
-   {
-    "name": "Marissa Gingrich",
-    "num": "10",
-    "pos": "G"
-   },
-   {
-    "name": "Addison Shen",
-    "num": "11",
-    "pos": "G"
-   },
-   {
-    "name": "Piper Engelby",
-    "num": "13",
-    "pos": "G"
-   },
-   {
-    "name": "Madilyn Dogs",
-    "num": "15",
-    "pos": "G"
-   },
-   {
-    "name": "Lauren Lee",
-    "num": "22",
-    "pos": "F"
-   },
-   {
-    "name": "Mackenzie Wright-Rawls",
-    "num": "23",
-    "pos": "F"
-   },
-   {
-    "name": "Matilde Baron",
-    "num": "24",
-    "pos": "G"
-   },
-   {
-    "name": "Carly Sweazie",
-    "num": "25",
-    "pos": "G"
-   },
-   {
-    "name": "Olivia O'Meally",
-    "num": "30",
-    "pos": "F"
-   },
-   {
-    "name": "Ava Locklear",
-    "num": "45",
-    "pos": "F"
-   }
-  ],
-  "womens-cross-country": [
-   {
-    "name": "Brooke Berry",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Taylor Blackwelder",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Kellyn Coller",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Jessie Fotheringham",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Diya Inta",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Hayley Lucido",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Sarah Van Ornum",
-    "num": "",
-    "pos": ""
-   }
-  ],
-  "womens-soccer": [
-   {
-    "name": "Kaele Smith",
-    "num": "0",
-    "pos": ""
-   },
-   {
-    "name": "Penelope Krieger",
-    "num": "1",
-    "pos": ""
-   },
-   {
-    "name": "Lena Dahms",
-    "num": "2",
-    "pos": "MF"
-   },
-   {
-    "name": "Emery Sterling",
-    "num": "3",
-    "pos": "F"
-   },
-   {
-    "name": "Merle Hueser",
-    "num": "4",
-    "pos": "D"
-   },
-   {
-    "name": "Gibson Graham",
-    "num": "5",
-    "pos": "D"
-   },
-   {
-    "name": "Mathilda Hellmich",
-    "num": "6",
-    "pos": "MF"
-   },
-   {
-    "name": "Kennedy Westbrook",
-    "num": "7",
-    "pos": "D"
-   },
-   {
-    "name": "Kirra Hyder",
-    "num": "8",
-    "pos": "M"
-   },
-   {
-    "name": "Taylor Stuart",
-    "num": "9",
-    "pos": "D"
-   },
-   {
-    "name": "Bella Ramirez",
-    "num": "10",
-    "pos": "MF"
-   },
-   {
-    "name": "Josephine Palmer",
-    "num": "11",
-    "pos": "MF"
-   },
-   {
-    "name": "Sofia Mignon",
-    "num": "12",
-    "pos": "MF"
-   },
-   {
-    "name": "Elyse Simpson",
-    "num": "13",
-    "pos": ""
-   },
-   {
-    "name": "Sydney Burlingame",
-    "num": "14",
-    "pos": "M"
-   },
-   {
-    "name": "Sydney Shepard",
-    "num": "16",
-    "pos": "D"
-   },
-   {
-    "name": "Brianna Garyah",
-    "num": "17",
-    "pos": "F"
-   },
-   {
-    "name": "Caitlin Mahala",
-    "num": "18",
-    "pos": "D"
-   },
-   {
-    "name": "Paulina de Vet",
-    "num": "19",
-    "pos": "F"
-   },
-   {
-    "name": "Ella Ortiz",
-    "num": "20",
-    "pos": "F"
-   },
-   {
-    "name": "Maria Tzoumas",
-    "num": "22",
-    "pos": "D"
-   },
-   {
-    "name": "Maya Filian",
-    "num": "25",
-    "pos": "F"
-   },
-   {
-    "name": "Alyssa Reiter",
-    "num": "26",
-    "pos": "F"
-   },
-   {
-    "name": "Filipa Heintzelmann",
-    "num": "28",
-    "pos": ""
-   },
-   {
-    "name": "Paige Eckert",
-    "num": "29",
-    "pos": "F"
-   }
-  ],
-  "womens-tennis": [
-   {
-    "name": "Feyza Aydin",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Arina Denisenko",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Diana Fernandes",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Anna Frost",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Lusia Hepcal Barcan",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Petra Koszo",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Ashika Pinninti",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Asima Sazan",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Vanya Virmani",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Tetiana Zhytelna",
-    "num": "",
-    "pos": ""
-   }
-  ],
-  "womens-track-field": [
-   {
-    "name": "Kierstin Ashby",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Raegan Bossard",
-    "num": "",
-    "pos": "J"
-   },
-   {
-    "name": "Abby Bugasch",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Kellyn Coller",
-    "num": "",
-    "pos": "MD"
-   },
-   {
-    "name": "Jessie Fotheringham",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "Kimmie Harding",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "Diya Inta",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "Sanai Jenkins",
-    "num": "",
-    "pos": "H/S"
-   },
-   {
-    "name": "Dakota Jones",
-    "num": "",
-    "pos": "H/S"
-   },
-   {
-    "name": "Lucia Julvez",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Jenna Keith",
-    "num": "",
-    "pos": "MD"
-   },
-   {
-    "name": "Kayla Kelsick",
-    "num": "",
-    "pos": "H/S"
-   },
-   {
-    "name": "Zaidah Lightener",
-    "num": "",
-    "pos": "J/S"
-   },
-   {
-    "name": "Hayley Lucido",
-    "num": "",
-    "pos": "S/MD"
-   },
-   {
-    "name": "Nelagh Matthews",
-    "num": "",
-    "pos": "S/H"
-   },
-   {
-    "name": "Oluwanifemi Olufowobi",
-    "num": "",
-    "pos": "H"
-   },
-   {
-    "name": "Maria Owens",
-    "num": "",
-    "pos": "J"
-   },
-   {
-    "name": "Isabella Patruno",
-    "num": "",
-    "pos": "M"
-   },
-   {
-    "name": "Iciar Rubio Gonzalez",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Ayomide Sopeju",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Maddie Stevens",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Sierra Turner",
-    "num": "",
-    "pos": "S"
-   },
-   {
-    "name": "Emine Ulcay",
-    "num": "",
-    "pos": "T"
-   },
-   {
-    "name": "Sarah Van Ornum",
-    "num": "",
-    "pos": "D"
-   },
-   {
-    "name": "Aniya Wilkins",
-    "num": "",
-    "pos": "H/S"
-   }
-  ],
-  "womens-volleyball": [
-   {
-    "name": "Mya Lei-Butters",
-    "num": "1",
-    "pos": "L"
-   },
-   {
-    "name": "Aries Fontaine",
-    "num": "2",
-    "pos": ""
-   },
-   {
-    "name": "Ela Akay",
-    "num": "3",
-    "pos": "L"
-   },
-   {
-    "name": "Maria Kurnatowska",
-    "num": "4",
-    "pos": "MB"
-   },
-   {
-    "name": "Sara Siefert",
-    "num": "6",
-    "pos": "OH"
-   },
-   {
-    "name": "Martina Gonzalo Cortes",
-    "num": "7",
-    "pos": "OH"
-   },
-   {
-    "name": "Giselle Parker",
-    "num": "8",
-    "pos": "Pin/MH"
-   },
-   {
-    "name": "Leah Devaraj",
-    "num": "9",
-    "pos": ""
-   },
-   {
-    "name": "Tereza Motalova",
-    "num": "10",
-    "pos": "MB"
-   },
-   {
-    "name": "Cece Marino",
-    "num": "11",
-    "pos": ""
-   },
-   {
-    "name": "Ema Torres",
-    "num": "12",
-    "pos": ""
-   },
-   {
-    "name": "Rowan Schreiber",
-    "num": "13",
-    "pos": "MB"
-   },
-   {
-    "name": "Madison MacKaig",
-    "num": "14",
-    "pos": "S"
-   },
-   {
-    "name": "Ashlynn Berns",
-    "num": "15",
-    "pos": "S"
-   },
-   {
-    "name": "Joaneliz Maisonet",
-    "num": "16",
-    "pos": ""
-   },
-   {
-    "name": "Kayden Campbell",
-    "num": "17",
-    "pos": ""
-   },
-   {
-    "name": "Finley McAndrew",
-    "num": "18",
-    "pos": ""
-   }
-  ],
-  "fencing": [
-   {
-    "name": "Andrew Arce",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Leonardo Bentivogli",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Markelo Deona",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Julian Detering",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Aidan Doctor",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Noam Duchene",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Gonzalo Fernandez",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Carlos Grodman",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Mark Horvath",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Brandon Howe",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Daniel Jeun",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Sabit Kilinc",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Lucien Leblanc-Morel",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Tim Li",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Fabio Mastromarino",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Quinn Peck",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Ryan Scharf",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Dila Erdogan",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Stella Frias",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Kaydine Gonzalez",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Teagan Lowrie",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Arianna Marrero",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Nandana Presanth",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Randa Shalabi",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Jazmin Sperka",
-    "num": "",
-    "pos": "Foil"
-   },
-   {
-    "name": "Asia Vitali",
-    "num": "",
-    "pos": "Epee"
-   },
-   {
-    "name": "Anastasiia Volynska",
-    "num": "",
-    "pos": "Sabre"
-   },
-   {
-    "name": "Zoey Wen",
-    "num": "",
-    "pos": "Saber"
-   }
-  ],
-  "bowling": [
-   {
-    "name": "Alex Berg",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Logan Chappell",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Jose De La Barrera",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Rockwell Dela Rosa",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Nicholas Fortis",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Danielle Grunwald",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Timothy Knowles",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Scott Lillis",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Aavinaash Rampersad",
-    "num": "",
-    "pos": ""
-   },
-   {
-    "name": "Caden Wood",
-    "num": "",
-    "pos": ""
-   }
-  ],
-  "ice-hockey": [
-   {
-    "name": "Niko Scherrer",
-    "num": "2",
-    "pos": "D"
-   },
-   {
-    "name": "Ezra Broomer",
-    "num": "4",
-    "pos": "F/D"
-   },
-   {
-    "name": "Richard Kosco",
-    "num": "5",
-    "pos": "F"
-   },
-   {
-    "name": "Anton Martino",
-    "num": "6",
-    "pos": "D"
-   },
-   {
-    "name": "Ian Eitienne",
-    "num": "7",
-    "pos": "F"
-   },
-   {
-    "name": "Ryan Talorico",
-    "num": "9",
-    "pos": "L"
-   },
-   {
-    "name": "Joseph Altomare",
-    "num": "10",
-    "pos": "F"
-   },
-   {
-    "name": "Mayeul Catelin",
-    "num": "11",
-    "pos": "D"
-   },
-   {
-    "name": "Matthew Roehrich",
-    "num": "12",
-    "pos": "F"
-   },
-   {
-    "name": "Nathan Cattafi",
-    "num": "18",
-    "pos": "F"
-   },
-   {
-    "name": "John Pinkham",
-    "num": "19",
-    "pos": "F"
-   },
-   {
-    "name": "Christian Cortez",
-    "num": "21",
-    "pos": "G"
-   },
-   {
-    "name": "Noah Bergen",
-    "num": "23",
-    "pos": "D"
-   },
-   {
-    "name": "Matthew Fulmino",
-    "num": "24",
-    "pos": "F"
-   },
-   {
-    "name": "Peter Mostecki",
-    "num": "25",
-    "pos": "F"
-   },
-   {
-    "name": "Bruce Rivera",
-    "num": "26",
-    "pos": "F/D"
-   },
-   {
-    "name": "Brandon Clayton",
-    "num": "27",
-    "pos": "F"
-   },
-   {
-    "name": "Eliot Marken",
-    "num": "29",
-    "pos": "G"
-   },
-   {
-    "name": "Noah Gibb",
-    "num": "31",
-    "pos": "G"
-   },
-   {
-    "name": "Jaiden Delgado",
-    "num": "33",
-    "pos": "G"
-   }
-  ]
- }
+  "updated": "2026-10-28T07:01:55-04:00",
+  "rosters": {
+    "mens-baseball": [
+      {
+        "name": "Cameron Boardman",
+        "num": "1",
+        "pos": "C"
+      },
+      {
+        "name": "Jack Stead",
+        "num": "2",
+        "pos": "INF"
+      },
+      {
+        "name": "Ethan Schmutz",
+        "num": "3",
+        "pos": "INF"
+      },
+      {
+        "name": "Ben Robinson",
+        "num": "4",
+        "pos": "INF"
+      },
+      {
+        "name": "Trent MacDougall",
+        "num": "5",
+        "pos": "OF"
+      },
+      {
+        "name": "Bennett Siegel",
+        "num": "7",
+        "pos": "OF"
+      },
+      {
+        "name": "Andrew Hart",
+        "num": "8",
+        "pos": "OF"
+      },
+      {
+        "name": "Jake Meyers",
+        "num": "10",
+        "pos": "OF"
+      },
+      {
+        "name": "Aaron Wojenski",
+        "num": "11",
+        "pos": "INF"
+      },
+      {
+        "name": "Tyler Skaggs",
+        "num": "14",
+        "pos": "C"
+      },
+      {
+        "name": "Brandon Falco",
+        "num": "15",
+        "pos": "RHP"
+      },
+      {
+        "name": "Conner DeLauzon",
+        "num": "16",
+        "pos": "OF"
+      },
+      {
+        "name": "Walddy Rodriguez",
+        "num": "18",
+        "pos": "INF"
+      },
+      {
+        "name": "DJ Lloyd",
+        "num": "19",
+        "pos": "C"
+      },
+      {
+        "name": "Anthony Catalano",
+        "num": "21",
+        "pos": "RHP"
+      },
+      {
+        "name": "Omar Carreras",
+        "num": "23",
+        "pos": "INF"
+      },
+      {
+        "name": "Matt Graziose",
+        "num": "24",
+        "pos": "INF"
+      },
+      {
+        "name": "Alberto Santos IV",
+        "num": "25",
+        "pos": "RHP"
+      },
+      {
+        "name": "CJ Wisniewski",
+        "num": "26",
+        "pos": "OF"
+      },
+      {
+        "name": "Becker Sybirski",
+        "num": "27",
+        "pos": "RHP"
+      },
+      {
+        "name": "Tyler Huzzy",
+        "num": "29",
+        "pos": "C"
+      },
+      {
+        "name": "Colin Kidd",
+        "num": "30",
+        "pos": "RHP"
+      },
+      {
+        "name": "Dylan Zammit",
+        "num": "31",
+        "pos": "RHP"
+      },
+      {
+        "name": "Eddie Werse",
+        "num": "32",
+        "pos": "LHP"
+      },
+      {
+        "name": "Conner Rippo",
+        "num": "34",
+        "pos": "P/OF"
+      },
+      {
+        "name": "Braydan Urban",
+        "num": "35",
+        "pos": "RHP"
+      },
+      {
+        "name": "Kam Street",
+        "num": "42",
+        "pos": "RHP"
+      },
+      {
+        "name": "Anthony Anzaldi",
+        "num": "43",
+        "pos": "LHP"
+      },
+      {
+        "name": "Greg Nascimento",
+        "num": "44",
+        "pos": "RHP"
+      },
+      {
+        "name": "Tade Riordan",
+        "num": "48",
+        "pos": "RHP"
+      },
+      {
+        "name": "Everett Bertsch",
+        "num": "49",
+        "pos": "RHP"
+      },
+      {
+        "name": "Aidan Lenzen",
+        "num": "50",
+        "pos": "RHP"
+      },
+      {
+        "name": "Samuel Gil",
+        "num": "52",
+        "pos": "RHP"
+      },
+      {
+        "name": "Hayden Estes",
+        "num": "55",
+        "pos": "RHP"
+      }
+    ],
+    "mens-basketball": [
+      {
+        "name": "Jayonni Durrough",
+        "num": "0",
+        "pos": ""
+      },
+      {
+        "name": "David Bolden",
+        "num": "1",
+        "pos": ""
+      },
+      {
+        "name": "Mario Tatum Jr.",
+        "num": "2",
+        "pos": ""
+      },
+      {
+        "name": "AJ Altobelli",
+        "num": "5",
+        "pos": ""
+      },
+      {
+        "name": "Victor Vanderstraeten",
+        "num": "6",
+        "pos": ""
+      },
+      {
+        "name": "Mathéo Coffi",
+        "num": "10",
+        "pos": ""
+      },
+      {
+        "name": "Brandon Stores Jr.",
+        "num": "12",
+        "pos": ""
+      },
+      {
+        "name": "Stefan Jimenez-Vojnic",
+        "num": "13",
+        "pos": ""
+      },
+      {
+        "name": "Quentin Duncan",
+        "num": "14",
+        "pos": ""
+      },
+      {
+        "name": "Brendan Oliver",
+        "num": "22",
+        "pos": ""
+      },
+      {
+        "name": "John Kelly",
+        "num": "25",
+        "pos": ""
+      },
+      {
+        "name": "Zack Scherler",
+        "num": "33",
+        "pos": ""
+      },
+      {
+        "name": "Rocco Awad",
+        "num": "44",
+        "pos": ""
+      }
+    ],
+    "mens-soccer": [
+      {
+        "name": "Samori McKell-Jeffers",
+        "num": "1",
+        "pos": "GK"
+      },
+      {
+        "name": "Luan Lazoja",
+        "num": "2",
+        "pos": "D"
+      },
+      {
+        "name": "Rodrigo Grenha",
+        "num": "3",
+        "pos": "D"
+      },
+      {
+        "name": "Eric Sadlocha",
+        "num": "4",
+        "pos": "D"
+      },
+      {
+        "name": "Patrick Kierzkowski",
+        "num": "5",
+        "pos": "D"
+      },
+      {
+        "name": "Hugo Tavares",
+        "num": "6",
+        "pos": "MF"
+      },
+      {
+        "name": "Jaime Barbero",
+        "num": "7",
+        "pos": "F"
+      },
+      {
+        "name": "Maximus Barboto",
+        "num": "8",
+        "pos": "MF"
+      },
+      {
+        "name": "Sebastian Sunol",
+        "num": "9",
+        "pos": "F"
+      },
+      {
+        "name": "Diogo Rebelo",
+        "num": "10",
+        "pos": "MF"
+      },
+      {
+        "name": "Jeremy Klinger",
+        "num": "11",
+        "pos": "F"
+      },
+      {
+        "name": "Ander Del Castillo",
+        "num": "12",
+        "pos": "F"
+      },
+      {
+        "name": "Riley Davis",
+        "num": "13",
+        "pos": "D"
+      },
+      {
+        "name": "Parker Brennan",
+        "num": "15",
+        "pos": "F"
+      },
+      {
+        "name": "Alfonso Borbon",
+        "num": "16",
+        "pos": "F"
+      },
+      {
+        "name": "Stefan Lichtenheim",
+        "num": "17",
+        "pos": "MF"
+      },
+      {
+        "name": "Mateusz Marciniak",
+        "num": "18",
+        "pos": "F"
+      },
+      {
+        "name": "Itay Soffer",
+        "num": "19",
+        "pos": "MF"
+      },
+      {
+        "name": "Henrique Sardinha",
+        "num": "20",
+        "pos": "MF"
+      },
+      {
+        "name": "Harusumi Takesada",
+        "num": "21",
+        "pos": "MF"
+      },
+      {
+        "name": "Daniel Tavares",
+        "num": "22",
+        "pos": "MF"
+      },
+      {
+        "name": "Jake Rubis",
+        "num": "23",
+        "pos": "MF"
+      },
+      {
+        "name": "Junee Lee",
+        "num": "24",
+        "pos": "D/F"
+      },
+      {
+        "name": "Telmo Vila",
+        "num": "25",
+        "pos": "F"
+      },
+      {
+        "name": "Tristan Barboto",
+        "num": "26",
+        "pos": "D"
+      },
+      {
+        "name": "Zain Thompson",
+        "num": "27",
+        "pos": "F"
+      },
+      {
+        "name": "Emil Aumann",
+        "num": "30",
+        "pos": "GK"
+      },
+      {
+        "name": "Andre Faerman",
+        "num": "32",
+        "pos": "GK"
+      }
+    ],
+    "mens-cross-country": [
+      {
+        "name": "Lasse Bjørn Jensen",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Judah Garcia Phillips",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Himien Jones",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Ryan Lang",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Noel Madda",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Elijah McCoy",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Erik Preisner",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Diego Reyes",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Daniel Wilson",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Isaac Yudkovsky",
+        "num": "",
+        "pos": ""
+      }
+    ],
+    "mens-lacrosse": [
+      {
+        "name": "Dylan Sebastian",
+        "num": "1",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Carson Piscitiello",
+        "num": "2",
+        "pos": "Attack"
+      },
+      {
+        "name": "Christopher Eiselein",
+        "num": "3",
+        "pos": "Midfield"
+      },
+      {
+        "name": "JC Echezuria IV",
+        "num": "4",
+        "pos": "Attack"
+      },
+      {
+        "name": "Dylan Kaelin Panico",
+        "num": "5",
+        "pos": "Defense"
+      },
+      {
+        "name": "Bodhi Lyon",
+        "num": "6",
+        "pos": "Goalkeeper"
+      },
+      {
+        "name": "Nate Ryan",
+        "num": "7",
+        "pos": "Defense"
+      },
+      {
+        "name": "Blake Piscitiello",
+        "num": "8",
+        "pos": "Attack"
+      },
+      {
+        "name": "Kelly Jackson",
+        "num": "9",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Eoin Power",
+        "num": "10",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Jack Wade",
+        "num": "11",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Frankie Semiraglio",
+        "num": "12",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Janyk Krisulevicz",
+        "num": "13",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Mike Bratus",
+        "num": "14",
+        "pos": "Defense"
+      },
+      {
+        "name": "Ryan Sininsky",
+        "num": "15",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Evan Schmitt",
+        "num": "17",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Jackson Foley",
+        "num": "18",
+        "pos": "Defense"
+      },
+      {
+        "name": "Walker Zabransky",
+        "num": "19",
+        "pos": "Defense"
+      },
+      {
+        "name": "Patrick Loxley",
+        "num": "21",
+        "pos": "Goalkeeper"
+      },
+      {
+        "name": "Carson Bowley",
+        "num": "22",
+        "pos": "Attack"
+      },
+      {
+        "name": "Brendan Stanislav",
+        "num": "24",
+        "pos": "Defense"
+      },
+      {
+        "name": "Michael Flaccavento",
+        "num": "25",
+        "pos": "Defense"
+      },
+      {
+        "name": "Mason Bryan",
+        "num": "27",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Tristan Harrison",
+        "num": "28",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Colin Lowe",
+        "num": "29",
+        "pos": "Defense"
+      },
+      {
+        "name": "Emmerick Dopona",
+        "num": "31",
+        "pos": "Defense"
+      },
+      {
+        "name": "Wade Meissner",
+        "num": "32",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Austin Exley",
+        "num": "33",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Will Corry",
+        "num": "34",
+        "pos": "Attack"
+      },
+      {
+        "name": "Connor Mumford",
+        "num": "40",
+        "pos": "Faceoff"
+      },
+      {
+        "name": "Michael Gaffney",
+        "num": "41",
+        "pos": "Faceoff"
+      },
+      {
+        "name": "Evan Lastella",
+        "num": "42",
+        "pos": "Defense"
+      },
+      {
+        "name": "Austin Hahn",
+        "num": "44",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Jake Apel",
+        "num": "45",
+        "pos": "Attack"
+      },
+      {
+        "name": "Sullivan O'Brien",
+        "num": "55",
+        "pos": "Defense"
+      },
+      {
+        "name": "Wyatt Viste",
+        "num": "66",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Daniel Wahn",
+        "num": "77",
+        "pos": "Defense"
+      },
+      {
+        "name": "Nirio Garcia",
+        "num": "88",
+        "pos": "Faceoff"
+      },
+      {
+        "name": "Brayden Haase",
+        "num": "91",
+        "pos": "Midfield"
+      },
+      {
+        "name": "Cameron Kurdyla",
+        "num": "99",
+        "pos": "Goalkeeper"
+      }
+    ],
+    "mens-swimming-diving": [
+      {
+        "name": "Spencer Swanholm",
+        "num": "",
+        "pos": "Distance/Free"
+      },
+      {
+        "name": "Yonatan Ahdut",
+        "num": "",
+        "pos": "Free/IM"
+      },
+      {
+        "name": "Luca Angelini",
+        "num": "",
+        "pos": "Sprint/Free"
+      },
+      {
+        "name": "Bartosz Bryg",
+        "num": "",
+        "pos": "Breast/IM"
+      },
+      {
+        "name": "Andrew Cellar",
+        "num": "",
+        "pos": "Back"
+      },
+      {
+        "name": "Vincent Coppola",
+        "num": "",
+        "pos": "IM/Free"
+      },
+      {
+        "name": "Ian Dinesh",
+        "num": "",
+        "pos": "Breast"
+      },
+      {
+        "name": "Beckham DiPierro",
+        "num": "",
+        "pos": "Dive"
+      },
+      {
+        "name": "Pawel Drzymala",
+        "num": "",
+        "pos": "Fly/IM"
+      },
+      {
+        "name": "Borys Endlé",
+        "num": "",
+        "pos": "IM/Breast"
+      },
+      {
+        "name": "RJ Farina",
+        "num": "",
+        "pos": "Free/IM/Breast"
+      },
+      {
+        "name": "Walker Frey",
+        "num": "",
+        "pos": "Dive"
+      },
+      {
+        "name": "Vittorio Giambelli",
+        "num": "",
+        "pos": "Fly"
+      },
+      {
+        "name": "Ryan Hause",
+        "num": "",
+        "pos": "Fly/Back/IM"
+      },
+      {
+        "name": "Justin Jarczynski",
+        "num": "",
+        "pos": "Distance/Free"
+      },
+      {
+        "name": "Jamar Josephs",
+        "num": "",
+        "pos": "Free/Fly"
+      },
+      {
+        "name": "Sam Lorenc",
+        "num": "",
+        "pos": "Free/Fly/IM"
+      },
+      {
+        "name": "Aiden Nugent",
+        "num": "",
+        "pos": "Distance/Free"
+      },
+      {
+        "name": "Edward Ormsby",
+        "num": "",
+        "pos": "IM"
+      },
+      {
+        "name": "Matthew Piacentini",
+        "num": "",
+        "pos": "Fly/Free"
+      },
+      {
+        "name": "Rehman Tariq",
+        "num": "",
+        "pos": "Fly/Stroke"
+      },
+      {
+        "name": "Mohamed Walid",
+        "num": "",
+        "pos": "Fly"
+      }
+    ],
+    "mens-track-field": [
+      {
+        "name": "Moustafa Abdelaal",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Osei Akuamoah-Boateng",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Jason Alvarez",
+        "num": "",
+        "pos": "H"
+      },
+      {
+        "name": "Ralu Anosike",
+        "num": "",
+        "pos": "J"
+      },
+      {
+        "name": "Jason Ballen",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Marvellous Bassey",
+        "num": "",
+        "pos": "J"
+      },
+      {
+        "name": "Lasse Bjørn Jensen",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "Eatoniel Brown",
+        "num": "",
+        "pos": "H"
+      },
+      {
+        "name": "Elisha Bugasch",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Gianni Campione",
+        "num": "",
+        "pos": "J"
+      },
+      {
+        "name": "Pietro Carpentari",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Devran Dikmen",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Davin Duffy",
+        "num": "",
+        "pos": "MD"
+      },
+      {
+        "name": "Caleb Duvelson",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Anthony Dvorsky",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "James Estafanous",
+        "num": "",
+        "pos": "MD"
+      },
+      {
+        "name": "Lossenie Fofana",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Judah Garcia Phillips",
+        "num": "",
+        "pos": "MD"
+      },
+      {
+        "name": "Aidan Groff",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "Jake Hancox",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Jaeden Henry",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Fabian Herrera",
+        "num": "",
+        "pos": "MD"
+      },
+      {
+        "name": "Cassian Holland-Moritz",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Nate Homefield",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Jeusten Jourdain",
+        "num": "",
+        "pos": "S/H"
+      },
+      {
+        "name": "Trotman Kertes",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Ryan Lang",
+        "num": "",
+        "pos": "MD"
+      },
+      {
+        "name": "Matin Mahmoud",
+        "num": "",
+        "pos": "J"
+      },
+      {
+        "name": "William Mitchell",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Ryan Nartey",
+        "num": "",
+        "pos": "J"
+      },
+      {
+        "name": "Prince Ossy",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Tyler Passmore",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Diego Reyes",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "Andrew Sabeh",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Jayden Smith",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Robbie Tormo",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Justin Villamizar",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Daniel Wilson",
+        "num": "",
+        "pos": "MD"
+      }
+    ],
+    "mens-tennis": [
+      {
+        "name": "Arijan Kaliterna",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Yerassyl Bakhtiyar",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Riccardo Campagnola",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Juan Diego Argenal",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Soma Fukuhara",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Francisco Guimaraes",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Maxime Hankins",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Severin Risan",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Tom Sorin",
+        "num": "",
+        "pos": ""
+      }
+    ],
+    "mens-volleyball": [
+      {
+        "name": "Harrison Girard",
+        "num": "1",
+        "pos": "OH"
+      },
+      {
+        "name": "Andre Aleixo",
+        "num": "2",
+        "pos": "OH"
+      },
+      {
+        "name": "Bruno Figueiredo",
+        "num": "3",
+        "pos": "S"
+      },
+      {
+        "name": "Adam Uryniuk",
+        "num": "4",
+        "pos": "S"
+      },
+      {
+        "name": "Daniel Latkowski",
+        "num": "5",
+        "pos": "MB"
+      },
+      {
+        "name": "Leo Fontaine",
+        "num": "7",
+        "pos": "OH"
+      },
+      {
+        "name": "Parker Moorhead",
+        "num": "8",
+        "pos": "OH"
+      },
+      {
+        "name": "Diego Lopez",
+        "num": "9",
+        "pos": "OH"
+      },
+      {
+        "name": "Ian Nguyen",
+        "num": "11",
+        "pos": "OH"
+      },
+      {
+        "name": "Alex Heins",
+        "num": "12",
+        "pos": "MB"
+      },
+      {
+        "name": "Philip Hanna",
+        "num": "13",
+        "pos": "MB"
+      },
+      {
+        "name": "Gustavo Chrcanovic",
+        "num": "14",
+        "pos": "OH"
+      },
+      {
+        "name": "Ron Tidhar",
+        "num": "15",
+        "pos": "L"
+      },
+      {
+        "name": "Brody Stuttgen",
+        "num": "16",
+        "pos": "S"
+      },
+      {
+        "name": "Arkaidiy Rivkin",
+        "num": "17",
+        "pos": "RS/OPP"
+      },
+      {
+        "name": "Wiktor Nowak",
+        "num": "19",
+        "pos": "OPP"
+      }
+    ],
+    "womens-basketball": [
+      {
+        "name": "Kate Donovan",
+        "num": "2",
+        "pos": "G"
+      },
+      {
+        "name": "Allison Cannon",
+        "num": "3",
+        "pos": "G"
+      },
+      {
+        "name": "Marina Bravo",
+        "num": "4",
+        "pos": "F"
+      },
+      {
+        "name": "Mia Gestosani",
+        "num": "8",
+        "pos": "G"
+      },
+      {
+        "name": "Marissa Gingrich",
+        "num": "10",
+        "pos": "G"
+      },
+      {
+        "name": "Addison Shen",
+        "num": "11",
+        "pos": "G"
+      },
+      {
+        "name": "Piper Engelby",
+        "num": "13",
+        "pos": "G"
+      },
+      {
+        "name": "Madilyn Dogs",
+        "num": "15",
+        "pos": "G"
+      },
+      {
+        "name": "Lauren Lee",
+        "num": "22",
+        "pos": "F"
+      },
+      {
+        "name": "Mackenzie Wright-Rawls",
+        "num": "23",
+        "pos": "F"
+      },
+      {
+        "name": "Matilde Baron",
+        "num": "24",
+        "pos": "G"
+      },
+      {
+        "name": "Carly Sweazie",
+        "num": "25",
+        "pos": "G"
+      },
+      {
+        "name": "Olivia O'Meally",
+        "num": "30",
+        "pos": "F"
+      },
+      {
+        "name": "Ava Locklear",
+        "num": "45",
+        "pos": "F"
+      }
+    ],
+    "womens-cross-country": [
+      {
+        "name": "Brooke Berry",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Taylor Blackwelder",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Kellyn Coller",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Jessie Fotheringham",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Diya Inta",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Hayley Lucido",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Sarah Van Ornum",
+        "num": "",
+        "pos": ""
+      }
+    ],
+    "womens-soccer": [
+      {
+        "name": "Kaele Smith",
+        "num": "0",
+        "pos": ""
+      },
+      {
+        "name": "Penelope Krieger",
+        "num": "1",
+        "pos": ""
+      },
+      {
+        "name": "Lena Dahms",
+        "num": "2",
+        "pos": "MF"
+      },
+      {
+        "name": "Emery Sterling",
+        "num": "3",
+        "pos": "F"
+      },
+      {
+        "name": "Merle Hueser",
+        "num": "4",
+        "pos": "D"
+      },
+      {
+        "name": "Gibson Graham",
+        "num": "5",
+        "pos": "D"
+      },
+      {
+        "name": "Mathilda Hellmich",
+        "num": "6",
+        "pos": "MF"
+      },
+      {
+        "name": "Kennedy Westbrook",
+        "num": "7",
+        "pos": "D"
+      },
+      {
+        "name": "Kirra Hyder",
+        "num": "8",
+        "pos": "M"
+      },
+      {
+        "name": "Taylor Stuart",
+        "num": "9",
+        "pos": "D"
+      },
+      {
+        "name": "Bella Ramirez",
+        "num": "10",
+        "pos": "MF"
+      },
+      {
+        "name": "Josephine Palmer",
+        "num": "11",
+        "pos": "MF"
+      },
+      {
+        "name": "Sofia Mignon",
+        "num": "12",
+        "pos": "MF"
+      },
+      {
+        "name": "Elyse Simpson",
+        "num": "13",
+        "pos": ""
+      },
+      {
+        "name": "Sydney Burlingame",
+        "num": "14",
+        "pos": "M"
+      },
+      {
+        "name": "Sydney Shepard",
+        "num": "16",
+        "pos": "D"
+      },
+      {
+        "name": "Brianna Garyah",
+        "num": "17",
+        "pos": "F"
+      },
+      {
+        "name": "Caitlin Mahala",
+        "num": "18",
+        "pos": "D"
+      },
+      {
+        "name": "Paulina de Vet",
+        "num": "19",
+        "pos": "F"
+      },
+      {
+        "name": "Ella Ortiz",
+        "num": "20",
+        "pos": "F"
+      },
+      {
+        "name": "Maria Tzoumas",
+        "num": "22",
+        "pos": "D"
+      },
+      {
+        "name": "Maya Filian",
+        "num": "25",
+        "pos": "F"
+      },
+      {
+        "name": "Alyssa Reiter",
+        "num": "26",
+        "pos": "F"
+      },
+      {
+        "name": "Filipa Heintzelmann",
+        "num": "28",
+        "pos": ""
+      },
+      {
+        "name": "Paige Eckert",
+        "num": "29",
+        "pos": "F"
+      }
+    ],
+    "womens-tennis": [
+      {
+        "name": "Feyza Aydin",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Arina Denisenko",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Diana Fernandes",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Anna Frost",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Lusia Hepcal Barcan",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Petra Koszo",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Ashika Pinninti",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Asima Sazan",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Vanya Virmani",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Tetiana Zhytelna",
+        "num": "",
+        "pos": ""
+      }
+    ],
+    "womens-track-field": [
+      {
+        "name": "Kierstin Ashby",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Raegan Bossard",
+        "num": "",
+        "pos": "J"
+      },
+      {
+        "name": "Abby Bugasch",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Kellyn Coller",
+        "num": "",
+        "pos": "MD"
+      },
+      {
+        "name": "Jessie Fotheringham",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "Kimmie Harding",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "Diya Inta",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "Sanai Jenkins",
+        "num": "",
+        "pos": "H/S"
+      },
+      {
+        "name": "Dakota Jones",
+        "num": "",
+        "pos": "H/S"
+      },
+      {
+        "name": "Lucia Julvez",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Jenna Keith",
+        "num": "",
+        "pos": "MD"
+      },
+      {
+        "name": "Kayla Kelsick",
+        "num": "",
+        "pos": "H/S"
+      },
+      {
+        "name": "Zaidah Lightener",
+        "num": "",
+        "pos": "J/S"
+      },
+      {
+        "name": "Hayley Lucido",
+        "num": "",
+        "pos": "S/MD"
+      },
+      {
+        "name": "Nelagh Matthews",
+        "num": "",
+        "pos": "S/H"
+      },
+      {
+        "name": "Oluwanifemi Olufowobi",
+        "num": "",
+        "pos": "H"
+      },
+      {
+        "name": "Maria Owens",
+        "num": "",
+        "pos": "J"
+      },
+      {
+        "name": "Isabella Patruno",
+        "num": "",
+        "pos": "M"
+      },
+      {
+        "name": "Iciar Rubio Gonzalez",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Ayomide Sopeju",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Maddie Stevens",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Sierra Turner",
+        "num": "",
+        "pos": "S"
+      },
+      {
+        "name": "Emine Ulcay",
+        "num": "",
+        "pos": "T"
+      },
+      {
+        "name": "Sarah Van Ornum",
+        "num": "",
+        "pos": "D"
+      },
+      {
+        "name": "Aniya Wilkins",
+        "num": "",
+        "pos": "H/S"
+      }
+    ],
+    "womens-volleyball": [
+      {
+        "name": "Mya Lei-Butters",
+        "num": "1",
+        "pos": "L"
+      },
+      {
+        "name": "Aries Fontaine",
+        "num": "2",
+        "pos": ""
+      },
+      {
+        "name": "Ela Akay",
+        "num": "3",
+        "pos": "L"
+      },
+      {
+        "name": "Maria Kurnatowska",
+        "num": "4",
+        "pos": "MB"
+      },
+      {
+        "name": "Sara Siefert",
+        "num": "6",
+        "pos": "OH"
+      },
+      {
+        "name": "Martina Gonzalo Cortes",
+        "num": "7",
+        "pos": "OH"
+      },
+      {
+        "name": "Giselle Parker",
+        "num": "8",
+        "pos": "Pin/MH"
+      },
+      {
+        "name": "Leah Devaraj",
+        "num": "9",
+        "pos": ""
+      },
+      {
+        "name": "Tereza Motalova",
+        "num": "10",
+        "pos": "MB"
+      },
+      {
+        "name": "Cece Marino",
+        "num": "11",
+        "pos": ""
+      },
+      {
+        "name": "Ema Torres",
+        "num": "12",
+        "pos": ""
+      },
+      {
+        "name": "Rowan Schreiber",
+        "num": "13",
+        "pos": "MB"
+      },
+      {
+        "name": "Madison MacKaig",
+        "num": "14",
+        "pos": "S"
+      },
+      {
+        "name": "Ashlynn Berns",
+        "num": "15",
+        "pos": "S"
+      },
+      {
+        "name": "Joaneliz Maisonet",
+        "num": "16",
+        "pos": ""
+      },
+      {
+        "name": "Kayden Campbell",
+        "num": "17",
+        "pos": ""
+      },
+      {
+        "name": "Finley McAndrew",
+        "num": "18",
+        "pos": ""
+      }
+    ],
+    "fencing": [
+      {
+        "name": "Andrew Arce",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Leonardo Bentivogli",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Markelo Deona",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Julian Detering",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Aidan Doctor",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Noam Duchene",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Gonzalo Fernandez",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Carlos Grodman",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Mark Horvath",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Brandon Howe",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Daniel Jeun",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Sabit Kilinc",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Lucien Leblanc-Morel",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Tim Li",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Fabio Mastromarino",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Quinn Peck",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Ryan Scharf",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Dila Erdogan",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Stella Frias",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Kaydine Gonzalez",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Teagan Lowrie",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Arianna Marrero",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Nandana Presanth",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Randa Shalabi",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Jazmin Sperka",
+        "num": "",
+        "pos": "Foil"
+      },
+      {
+        "name": "Asia Vitali",
+        "num": "",
+        "pos": "Epee"
+      },
+      {
+        "name": "Anastasiia Volynska",
+        "num": "",
+        "pos": "Sabre"
+      },
+      {
+        "name": "Zoey Wen",
+        "num": "",
+        "pos": "Saber"
+      }
+    ],
+    "bowling": [
+      {
+        "name": "Alex Berg",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Logan Chappell",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Jose De La Barrera",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Rockwell Dela Rosa",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Nicholas Fortis",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Danielle Grunwald",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Timothy Knowles",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Scott Lillis",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Aavinaash Rampersad",
+        "num": "",
+        "pos": ""
+      },
+      {
+        "name": "Caden Wood",
+        "num": "",
+        "pos": ""
+      }
+    ],
+    "ice-hockey": [
+      {
+        "name": "Niko Scherrer",
+        "num": "2",
+        "pos": "D"
+      },
+      {
+        "name": "Ezra Broomer",
+        "num": "4",
+        "pos": "F/D"
+      },
+      {
+        "name": "Richard Kosco",
+        "num": "5",
+        "pos": "F"
+      },
+      {
+        "name": "Anton Martino",
+        "num": "6",
+        "pos": "D"
+      },
+      {
+        "name": "Ian Eitienne",
+        "num": "7",
+        "pos": "F"
+      },
+      {
+        "name": "Ryan Talorico",
+        "num": "9",
+        "pos": "L"
+      },
+      {
+        "name": "Joseph Altomare",
+        "num": "10",
+        "pos": "F"
+      },
+      {
+        "name": "Mayeul Catelin",
+        "num": "11",
+        "pos": "D"
+      },
+      {
+        "name": "Matthew Roehrich",
+        "num": "12",
+        "pos": "F"
+      },
+      {
+        "name": "Nathan Cattafi",
+        "num": "18",
+        "pos": "F"
+      },
+      {
+        "name": "John Pinkham",
+        "num": "19",
+        "pos": "F"
+      },
+      {
+        "name": "Christian Cortez",
+        "num": "21",
+        "pos": "G"
+      },
+      {
+        "name": "Noah Bergen",
+        "num": "23",
+        "pos": "D"
+      },
+      {
+        "name": "Matthew Fulmino",
+        "num": "24",
+        "pos": "F"
+      },
+      {
+        "name": "Peter Mostecki",
+        "num": "25",
+        "pos": "F"
+      },
+      {
+        "name": "Bruce Rivera",
+        "num": "26",
+        "pos": "F/D"
+      },
+      {
+        "name": "Brandon Clayton",
+        "num": "27",
+        "pos": "F"
+      },
+      {
+        "name": "Eliot Marken",
+        "num": "29",
+        "pos": "G"
+      },
+      {
+        "name": "Noah Gibb",
+        "num": "31",
+        "pos": "G"
+      },
+      {
+        "name": "Jaiden Delgado",
+        "num": "33",
+        "pos": "G"
+      }
+    ]
+  }
 }
