@@ -31,7 +31,11 @@
     "preview|womens-volleyball|2026-10-30": "2026-10-28T12:32:20.948638-04:00",
     "preview|mens-soccer|2026-10-30": "2026-10-28T12:32:20.948638-04:00",
     "preview|mens-swimming-diving|2026-10-31": "2026-10-29T12:11:15.005436-04:00",
-    "preview|ice-hockey|2026-10-31": "2026-10-29T12:11:15.005436-04:00"
+    "preview|ice-hockey|2026-10-31": "2026-10-29T12:11:15.005436-04:00",
+    "womens-cross-country:11496|away_morning": "2026-10-30T09:58:08.219172-04:00",
+    "mens-cross-country:11487|away_morning": "2026-10-30T09:58:08.219172-04:00",
+    "womens-volleyball:11520|home_morning": "2026-10-30T09:58:08.219172-04:00",
+    "mens-soccer:11479|home_morning": "2026-10-30T09:58:08.219172-04:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -133,6 +137,24 @@
     ],
     "mens-swimming-diving:preview_intro": [
       4
+    ],
+    "womens-cross-country:away_morning": [
+      3
+    ],
+    "mens-cross-country:away_morning": [
+      7
+    ],
+    "womens-volleyball:home_morning": [
+      0
+    ],
+    "womens-volleyball:home_poll": [
+      1
+    ],
+    "mens-soccer:home_morning": [
+      6
+    ],
+    "mens-soccer:home_poll": [
+      0
     ]
   }
 }
