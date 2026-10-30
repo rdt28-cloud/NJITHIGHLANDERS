@@ -41,7 +41,8 @@
     "preview|womens-volleyball|2026-11-01": "2026-10-30T12:33:54.340618-04:00",
     "preview|ice-hockey|2026-11-01": "2026-10-30T12:33:54.340618-04:00",
     "preview|fencing|2026-11-01": "2026-10-30T12:33:54.340618-04:00",
-    "womens-volleyball:11520|home_pullup": "2026-10-30T13:23:02.886735-04:00"
+    "womens-volleyball:11520|home_pullup": "2026-10-30T13:23:02.886735-04:00",
+    "mens-soccer:11479|home_pullup": "2026-10-30T17:49:24.191172-04:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -173,6 +174,9 @@
     ],
     "womens-volleyball:home_pullup": [
       3
+    ],
+    "mens-soccer:home_pullup": [
+      4
     ]
   }
 }
