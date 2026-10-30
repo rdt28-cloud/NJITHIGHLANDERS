@@ -35,7 +35,8 @@
     "womens-cross-country:11496|away_morning": "2026-10-30T09:58:08.219172-04:00",
     "mens-cross-country:11487|away_morning": "2026-10-30T09:58:08.219172-04:00",
     "womens-volleyball:11520|home_morning": "2026-10-30T09:58:08.219172-04:00",
-    "mens-soccer:11479|home_morning": "2026-10-30T09:58:08.219172-04:00"
+    "mens-soccer:11479|home_morning": "2026-10-30T09:58:08.219172-04:00",
+    "womens-cross-country:11496|away_live": "2026-10-30T10:55:23.865669-04:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -155,6 +156,9 @@
     ],
     "mens-soccer:home_poll": [
       0
+    ],
+    "womens-cross-country:away_live": [
+      5
     ]
   }
 }
