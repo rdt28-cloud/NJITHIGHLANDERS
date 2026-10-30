@@ -40,7 +40,8 @@
     "mens-cross-country:11487|away_live": "2026-10-30T11:47:58.276340-04:00",
     "preview|womens-volleyball|2026-11-01": "2026-10-30T12:33:54.340618-04:00",
     "preview|ice-hockey|2026-11-01": "2026-10-30T12:33:54.340618-04:00",
-    "preview|fencing|2026-11-01": "2026-10-30T12:33:54.340618-04:00"
+    "preview|fencing|2026-11-01": "2026-10-30T12:33:54.340618-04:00",
+    "womens-volleyball:11520|home_pullup": "2026-10-30T13:23:02.886735-04:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -168,6 +169,9 @@
       5
     ],
     "mens-cross-country:away_live": [
+      3
+    ],
+    "womens-volleyball:home_pullup": [
       3
     ]
   }
