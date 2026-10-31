@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-30T06:53:42-04:00",
+  "updated": "2026-10-31T06:43:26-04:00",
   "games": [
     {
       "uid": "womens-cross-country:11496",
@@ -14,8 +14,9 @@
       "tournament": true,
       "promo": null,
       "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/220ec538-5af5-4088-8278-af5d4c1e66af"
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/womens-cross-country/schedule",
+        "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-cross-country/schedule"
     },
@@ -32,8 +33,9 @@
       "tournament": true,
       "promo": null,
       "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/220ec538-5af5-4088-8278-af5d4c1e66af"
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/mens-cross-country/schedule",
+        "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-cross-country/schedule"
     },
@@ -50,8 +52,9 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "America East Live",
-        "url": "https://americaeast.com/watch/default.aspx?Live=18109&path=conf"
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/womens-volleyball/schedule",
+        "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-volleyball/schedule"
     },
@@ -69,7 +72,7 @@
       "promo": "Senior Night",
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/4e649d74-b1e5-4ea1-a967-0a5541b525a5"
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
