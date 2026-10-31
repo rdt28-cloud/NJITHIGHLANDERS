@@ -44,7 +44,9 @@
     "womens-volleyball:11520|home_pullup": "2026-10-30T13:23:02.886735-04:00",
     "mens-soccer:11479|home_pullup": "2026-10-30T17:49:24.191172-04:00",
     "mens-swimming-diving:11687|away_morning": "2026-10-31T09:00:06.190831-04:00",
-    "ice-hockey:11708|away_morning": "2026-10-31T09:00:06.190831-04:00"
+    "ice-hockey:11708|away_morning": "2026-10-31T09:00:06.190831-04:00",
+    "preview|womens-basketball|2026-11-02": "2026-10-31T12:16:31.989632-04:00",
+    "preview|mens-basketball|2026-11-02": "2026-10-31T12:16:31.989632-04:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -56,7 +58,9 @@
     "fencing": 0,
     "womens-cross-country": 1,
     "mens-cross-country": 3,
-    "mens-swimming-diving": 1
+    "mens-swimming-diving": 1,
+    "womens-basketball": 3,
+    "mens-basketball": 1
   },
   "recent": {
     "womens-soccer:preview_intro": [
@@ -183,6 +187,12 @@
     ],
     "mens-swimming-diving:away_morning": [
       7
+    ],
+    "womens-basketball:preview_intro": [
+      1
+    ],
+    "mens-basketball:preview_intro": [
+      0
     ]
   }
 }
