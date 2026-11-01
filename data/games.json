@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T06:43:26-04:00",
+  "updated": "2026-11-01T05:46:23-05:00",
   "games": [
     {
       "uid": "womens-cross-country:11496",
@@ -89,8 +89,9 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/764511ce-c33b-408b-86a6-5ed3ff5073a2#bucketId=8456"
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule",
+        "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule"
     },
