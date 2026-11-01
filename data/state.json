@@ -52,7 +52,8 @@
     "womens-volleyball:11521|home_morning": "2026-11-01T09:16:41.028066-05:00",
     "ice-hockey:11709|away_morning": "2026-11-01T09:16:41.028066-05:00",
     "fencing:11660|home_morning": "2026-11-01T09:16:41.028066-05:00",
-    "preview|mens-soccer|2026-11-03": "2026-11-01T13:08:23.843277-05:00"
+    "preview|mens-soccer|2026-11-03": "2026-11-01T13:08:23.843277-05:00",
+    "ice-hockey:11709|away_live": "2026-11-01T15:12:59.937461-05:00"
   },
   "preview_kind": {
     "womens-soccer": 2,
@@ -135,7 +136,8 @@
     ],
     "ice-hockey:away_soon": [
       4,
-      0
+      0,
+      2
     ],
     "womens-soccer:home_morning": [
       0
