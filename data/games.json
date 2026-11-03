@@ -1,44 +1,6 @@
 {
-  "updated": "2026-11-02T06:05:57-05:00",
+  "updated": "2026-11-03T06:02:50-05:00",
   "games": [
-    {
-      "uid": "mens-swimming-diving:11687",
-      "sport": "mens-swimming-diving",
-      "opponent": "Fordham",
-      "where": "away",
-      "date": "2026-10-31",
-      "start": "2026-10-31T13:00:00-04:00",
-      "time_text": "1pm",
-      "location": "New York, NY",
-      "venue": "New York, NY",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule"
-    },
-    {
-      "uid": "ice-hockey:11708",
-      "sport": "ice-hockey",
-      "opponent": "Yeshiva",
-      "where": "away",
-      "date": "2026-10-31",
-      "start": "2026-10-31T20:45:00-04:00",
-      "time_text": "8:45 PM",
-      "location": "Mackay Ice Rink",
-      "venue": "Mackay Ice Rink",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
-    },
     {
       "uid": "womens-volleyball:11521",
       "sport": "womens-volleyball",
@@ -148,7 +110,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/23b79428-b15e-426e-bdad-d7d1a2e65d38"
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -166,7 +128,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/38950ba1-594a-486a-a53c-044076da8a09"
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-basketball/schedule"
     },
@@ -183,9 +145,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-soccer/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/cde090ad-6942-4b8b-98c6-36da3ffeeaf6"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
@@ -203,7 +164,7 @@
       "promo": "America East-Metro Challenge",
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "url": "https://www.espn.com/watch/player/_/id/707bd0a2-4959-41d2-87a6-2216bd00b6b5"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
