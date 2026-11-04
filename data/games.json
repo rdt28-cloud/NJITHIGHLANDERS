@@ -1,101 +1,6 @@
 {
-  "updated": "2026-11-03T06:02:50-05:00",
+  "updated": "2026-11-04T06:17:24-05:00",
   "games": [
-    {
-      "uid": "womens-volleyball:11521",
-      "sport": "womens-volleyball",
-      "opponent": "New Hampshire",
-      "where": "home",
-      "date": "2026-11-01",
-      "start": "2026-11-01T13:00:00-05:00",
-      "time_text": "1:00 PM",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-volleyball/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-volleyball/schedule"
-    },
-    {
-      "uid": "ice-hockey:11709",
-      "sport": "ice-hockey",
-      "opponent": "Bloomsburg",
-      "where": "away",
-      "date": "2026-11-01",
-      "start": "2026-11-01T15:00:00-05:00",
-      "time_text": "3:00 PM",
-      "location": "Toyota Sportsplex",
-      "venue": "Toyota Sportsplex",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
-    },
-    {
-      "uid": "fencing:11660",
-      "sport": "fencing",
-      "opponent": "Drew",
-      "where": "home",
-      "date": "2026-11-01",
-      "start": null,
-      "time_text": "TBA",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": true,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-fencing/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-fencing/schedule"
-    },
-    {
-      "uid": "fencing:11722",
-      "sport": "fencing",
-      "opponent": "Hunter",
-      "where": "home",
-      "date": "2026-11-01",
-      "start": null,
-      "time_text": "TBA",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": true,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-fencing/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-fencing/schedule"
-    },
-    {
-      "uid": "fencing:11723",
-      "sport": "fencing",
-      "opponent": "Hunter College",
-      "where": "home",
-      "date": "2026-11-01",
-      "start": null,
-      "time_text": "TBA",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": true,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-fencing/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-fencing/schedule"
-    },
     {
       "uid": "womens-basketball:11563",
       "sport": "womens-basketball",
@@ -146,7 +51,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/cde090ad-6942-4b8b-98c6-36da3ffeeaf6"
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
@@ -263,6 +168,24 @@
       "schedule_url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule"
     },
     {
+      "uid": "mens-soccer:11576",
+      "sport": "mens-soccer",
+      "opponent": "No. 5 New Hampshire (America East Quarterfinals)",
+      "where": "home",
+      "date": "2026-11-07",
+      "start": "2026-11-07T19:00:00-05:00",
+      "time_text": "7pm",
+      "location": "Newark, NJ Lubetkin Field at Mal Simon Stadium",
+      "venue": "Lubetkin Field at Mal Simon Stadium",
+      "tournament": true,
+      "promo": null,
+      "stream": {
+        "name": "ESPN+",
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+      },
+      "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
+    },
+    {
       "uid": "ice-hockey:11710",
       "sport": "ice-hockey",
       "opponent": "Seton Hall",
@@ -299,25 +222,6 @@
         "unconfirmed": true
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-fencing/schedule"
-    },
-    {
-      "uid": "mens-soccer:11576",
-      "sport": "mens-soccer",
-      "opponent": "America East Quarterfinals",
-      "where": "away",
-      "date": "2026-11-07",
-      "start": null,
-      "time_text": "TBD",
-      "location": "TBD",
-      "venue": "TBD",
-      "tournament": true,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-soccer/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
     {
       "uid": "womens-volleyball:11522",
@@ -2247,8 +2151,8 @@
       "date": "2027-02-19",
       "start": null,
       "time_text": "TBD",
-      "location": "Philadelphia, PA Branch Brook Park",
-      "venue": "Philadelphia, PA Branch Brook Park",
+      "location": "Philadelphia, PA",
+      "venue": "Philadelphia, PA",
       "tournament": false,
       "promo": null,
       "stream": {
