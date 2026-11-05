@@ -1,42 +1,6 @@
 {
-  "updated": "2026-11-04T06:17:24-05:00",
+  "updated": "2026-11-05T13:06:17-05:00",
   "games": [
-    {
-      "uid": "womens-basketball:11563",
-      "sport": "womens-basketball",
-      "opponent": "Rider",
-      "where": "home",
-      "date": "2026-11-02",
-      "start": "2026-11-02T18:00:00-05:00",
-      "time_text": "6pm",
-      "location": "Newark, NJ Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "venue": "Joel & Diane Bloom Wellness and Events Center (WEC)",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
-    },
-    {
-      "uid": "mens-basketball:11547",
-      "sport": "mens-basketball",
-      "opponent": "Dayton",
-      "where": "away",
-      "date": "2026-11-02",
-      "start": "2026-11-02T19:00:00-05:00",
-      "time_text": "7:00 PM",
-      "location": "Dayton, OH",
-      "venue": "Dayton, OH",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-basketball/schedule"
-    },
     {
       "uid": "mens-soccer:11480",
       "sport": "mens-soccer",
