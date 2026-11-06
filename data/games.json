@@ -1,24 +1,6 @@
 {
-  "updated": "2026-11-05T13:06:17-05:00",
+  "updated": "2026-11-06T12:32:01-05:00",
   "games": [
-    {
-      "uid": "mens-soccer:11480",
-      "sport": "mens-soccer",
-      "opponent": "UMBC",
-      "where": "away",
-      "date": "2026-11-03",
-      "start": "2026-11-03T19:00:00-05:00",
-      "time_text": "7pm",
-      "location": "Baltimore, MD",
-      "venue": "Baltimore, MD",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
-    },
     {
       "uid": "womens-basketball:11564",
       "sport": "womens-basketball",
@@ -33,7 +15,7 @@
       "promo": "America East-Metro Challenge",
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/707bd0a2-4959-41d2-87a6-2216bd00b6b5"
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -51,7 +33,7 @@
       "promo": "America East-Metro Challenge",
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/watch/player/_/id/1f933379-b5e0-4c5d-9913-192de1927977"
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-basketball/schedule"
     },
@@ -237,9 +219,8 @@
       "tournament": true,
       "promo": "America East-Metro Challenge",
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/b8567e34-cca2-4384-ace3-6d7c691dbc6a"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -1455,44 +1436,6 @@
         "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
-    },
-    {
-      "uid": "mens-track-field:11631",
-      "sport": "mens-track-field",
-      "opponent": "Ramapo College Indoor Invite",
-      "where": "neutral",
-      "date": "2027-01-22",
-      "start": null,
-      "time_text": "TBD",
-      "location": "New York, NY NYC Armory Track & Field Center",
-      "venue": "New York, NY NYC Armory Track & Field Center",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-track-and-field/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/mens-track-and-field/schedule"
-    },
-    {
-      "uid": "womens-track-field:11645",
-      "sport": "womens-track-field",
-      "opponent": "Ramapo College Indoor Invite",
-      "where": "neutral",
-      "date": "2027-01-22",
-      "start": null,
-      "time_text": "TBD",
-      "location": "New York, NY NYC Armory Track & Field Center",
-      "venue": "New York, NY NYC Armory Track & Field Center",
-      "tournament": false,
-      "promo": null,
-      "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-track-and-field/schedule",
-        "unconfirmed": true
-      },
-      "schedule_url": "https://njithighlanders.com/sports/womens-track-and-field/schedule"
     },
     {
       "uid": "mens-swimming-diving:11692",
