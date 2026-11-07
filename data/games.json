@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T12:32:01-05:00",
+  "updated": "2026-11-07T11:25:54-05:00",
   "games": [
     {
       "uid": "womens-basketball:11564",
@@ -107,9 +107,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule",
-        "unconfirmed": true
+        "name": "America East Live",
+        "url": "https://americaeast.com/watch/default.aspx?Live=18359&path=binghamton"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-swimming-and-diving/schedule"
     },
@@ -127,7 +126,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "url": "https://www.espn.com/watch/player/_/id/a9881176-3285-46e5-a64e-cd3ee4a62331"
       },
       "schedule_url": "https://njithighlanders.com/sports/mens-soccer/schedule"
     },
@@ -244,16 +243,35 @@
       "schedule_url": "https://njithighlanders.com/sports/mens-ice-hockey/schedule"
     },
     {
-      "uid": "fencing:11662",
+      "uid": "fencing:11724",
       "sport": "fencing",
-      "opponent": "Columbia Invitational",
+      "opponent": "Columbia",
       "where": "away",
       "date": "2026-11-08",
       "start": null,
       "time_text": "TBA",
       "location": "New York, NY",
       "venue": "New York, NY",
-      "tournament": false,
+      "tournament": true,
+      "promo": null,
+      "stream": {
+        "name": "the live stream",
+        "url": "https://njithighlanders.com/sports/mens-fencing/schedule",
+        "unconfirmed": true
+      },
+      "schedule_url": "https://njithighlanders.com/sports/mens-fencing/schedule"
+    },
+    {
+      "uid": "fencing:11662",
+      "sport": "fencing",
+      "opponent": "LIU",
+      "where": "away",
+      "date": "2026-11-08",
+      "start": null,
+      "time_text": "TBA",
+      "location": "New York, NY",
+      "venue": "New York, NY",
+      "tournament": true,
       "promo": null,
       "stream": {
         "name": "the live stream",
@@ -294,9 +312,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/14d53943-dd8e-44f1-b466-e0cef6baebc8"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -407,9 +424,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/f7280233-0596-45f0-9667-94407100ae1f"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -484,7 +500,7 @@
       "promo": null,
       "stream": {
         "name": "ESPN+",
-        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
+        "url": "https://www.espn.com/watch/player/_/id/d46488e4-7218-48f4-bac0-69f19ad51068"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -558,9 +574,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/605ede65-abc3-44e0-8a93-2bc5bd02d649"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -690,9 +705,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/watch/player/_/id/ad91a3c8-025f-4665-b146-501200151fd8"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -820,9 +834,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
-        "unconfirmed": true
+        "name": "ESPN+",
+        "url": "https://www.espn.com/search/_/appearance/dark/o/watch/q/njit"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
@@ -1121,9 +1134,8 @@
       "tournament": false,
       "promo": null,
       "stream": {
-        "name": "the live stream",
-        "url": "https://njithighlanders.com/sports/womens-basketball/schedule",
-        "unconfirmed": true
+        "name": "FloSports",
+        "url": "https://go.flocollege.com/teams/caa-drexel?utm_medium=partner&utm_source=multiple&utm_content=school-landing-page&utm_term=drexel"
       },
       "schedule_url": "https://njithighlanders.com/sports/womens-basketball/schedule"
     },
